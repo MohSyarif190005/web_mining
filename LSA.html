@@ -1,0 +1,2221 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Latent Semantic Analytic (LSA) &#8212; Universitas Trunojoyo Madura</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bagging Classifier (Ensemble Learning), Grid Search dan Random Forest" href="Bagging_Classifier.html" />
+    <link rel="prev" title="UTS" href="UTS_PPW.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Universitas Trunojoyo Madura</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="notebooks.html">
+                    Pencarian dan Penambangan Web
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Data_Abstrak_PTA.html">
+   Data Abstrak PTA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Data_Twitter.html">
+   Data Web Twitter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Data_Berita_Pagerank.html">
+   Pagerank
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="UTS_PPW.html">
+   UTS
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Latent Semantic Analytic (LSA)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Bagging_Classifier.html">
+   Bagging Classifier (Ensemble Learning), Grid Search dan Random Forest
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ensemble_Stacking.html">
+   Ensemble Stacking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="about_me.html">
+   About Me
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/MohSyarif190005/web_mining/master?urlpath=tree/docs/LSA.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/drive/1lMMiXxFY2mtMyc9xYAXo-JJqxdqT-C2t?usp=sharing/github/MohSyarif190005/web_mining/blob/master/docs/LSA.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/MohSyarif190005/web_mining"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/MohSyarif190005/web_mining/issues/new?title=Issue%20on%20page%20%2FLSA.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/LSA.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-berita">
+   Data Berita
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lsa-latent-semantic-analytic">
+     LSA (Latent Semantic Analytic)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#topic-modelling">
+     Topic Modelling
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#perbandingan-antara-teks-klasifikasi-dengan-topic-modelling">
+     Perbandingan Antara Teks Klasifikasi dengan Topic Modelling
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crawling-data">
+   Crawling Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menginstal-modul">
+     Menginstal Modul
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menentukan-direktori">
+     Menentukan Direktori
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-csv">
+     Import CSV
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mendapatkan-data">
+     Mendapatkan Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menyimpan-data">
+     Menyimpan Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preprocessing-text">
+   Preprocessing Text
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cleaning-text">
+     Cleaning Text
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preview-dataset">
+     Preview Dataset
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mengubah-hasil-preprocessing-menjadi-document-term-matrix">
+   Mengubah Hasil Preprocessing Menjadi Document Term Matrix
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tf-idf">
+     TF-IDF
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#term-frequency">
+     Term Frequency
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#idf">
+     IDF
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mengetahui-kata-yang-sering-ada">
+     Mengetahui Kata yang Sering Ada
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lsa">
+   LSA
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#svd">
+     SVD
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kesimpulan">
+   Kesimpulan
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Latent Semantic Analytic (LSA)</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-berita">
+   Data Berita
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lsa-latent-semantic-analytic">
+     LSA (Latent Semantic Analytic)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#topic-modelling">
+     Topic Modelling
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#perbandingan-antara-teks-klasifikasi-dengan-topic-modelling">
+     Perbandingan Antara Teks Klasifikasi dengan Topic Modelling
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crawling-data">
+   Crawling Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menginstal-modul">
+     Menginstal Modul
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menentukan-direktori">
+     Menentukan Direktori
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-csv">
+     Import CSV
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mendapatkan-data">
+     Mendapatkan Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menyimpan-data">
+     Menyimpan Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preprocessing-text">
+   Preprocessing Text
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cleaning-text">
+     Cleaning Text
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preview-dataset">
+     Preview Dataset
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mengubah-hasil-preprocessing-menjadi-document-term-matrix">
+   Mengubah Hasil Preprocessing Menjadi Document Term Matrix
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tf-idf">
+     TF-IDF
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#term-frequency">
+     Term Frequency
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#idf">
+     IDF
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mengetahui-kata-yang-sering-ada">
+     Mengetahui Kata yang Sering Ada
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lsa">
+   LSA
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#svd">
+     SVD
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kesimpulan">
+   Kesimpulan
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="latent-semantic-analytic-lsa">
+<h1>Latent Semantic Analytic (LSA)<a class="headerlink" href="#latent-semantic-analytic-lsa" title="Permalink to this headline">#</a></h1>
+<section id="data-berita">
+<h2>Data Berita<a class="headerlink" href="#data-berita" title="Permalink to this headline">#</a></h2>
+<p>Data berita merupakan sebuah dataset yang berisi tentang berita aktual yang ada di website. Data Berita yang digunakan berdasarkan dari website <a class="reference external" href="http://www.detik.com">www.detik.com</a> dan akan dilakukan beberapa analisis, yaitu sebuah LSA atau Latent Semantic Analytic.</p>
+<section id="lsa-latent-semantic-analytic">
+<h3>LSA (Latent Semantic Analytic)<a class="headerlink" href="#lsa-latent-semantic-analytic" title="Permalink to this headline">#</a></h3>
+<p>LSA atau Latent Semantic Analytic merupakan menggunakan model bag of word(BoW), yang menghasilkan matriks term-dokumen (kemunculan istilah dalam dokumen). Baris mewakili istilah dan kolom mewakili dokumen. LSA mempelajari topik laten dengan melakukan dekomposisi matriks pada matriks istilah dokumen menggunakan dekomposisi nilai Singular. LSA biasanya digunakan sebagai teknik pengurangan dimensi atau pengurangan kebisingan (noise redusing technique). Dalam LSA, dilakukan sebuah topic modelling.</p>
+<img src="https://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1538411402/image3_maagmh.png"></section>
+<section id="topic-modelling">
+<h3>Topic Modelling<a class="headerlink" href="#topic-modelling" title="Permalink to this headline">#</a></h3>
+<p>secara otomatis menemukan tema tersembunyi dari dokumen yang diberikan. Ini adalah algoritma analitik teks tanpa pengawasan yang digunakan untuk menemukan kelompok kata dari dokumen yang diberikan. Kelompok kata ini mewakili sebuah topik. Ada kemungkinan bahwa, satu dokumen dapat dikaitkan dengan beberapa tema. misalnya, kata kelompok seperti ‘pasien’, ‘dokter’, ‘penyakit’, ‘kanker’, iklan ‘kesehatan’ akan mewakili topik ‘kesehatan’. Pemodelan Topik atau topic modelling adalah permainan yang berbeda dibandingkan dengan pencarian teks berbasis aturan yang menggunakan ekspresi reguler.</p>
+<img src="https://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1538411402/Image1_dz0yfl.png"></section>
+<section id="perbandingan-antara-teks-klasifikasi-dengan-topic-modelling">
+<h3>Perbandingan Antara Teks Klasifikasi dengan Topic Modelling<a class="headerlink" href="#perbandingan-antara-teks-klasifikasi-dengan-topic-modelling" title="Permalink to this headline">#</a></h3>
+<p>Klasifikasi teks adalah masalah pembelajaran mesin yang diawasi, di mana dokumen teks atau artikel diklasifikasikan ke dalam kumpulan kelas yang telah ditentukan sebelumnya. Pemodelan topik adalah proses menemukan kelompok kata-kata yang muncul bersama dalam dokumen teks. Kata-kata terkait yang muncul bersama kelompok ini membuat “topik”. Ini adalah bentuk pembelajaran tanpa pengawasan, sehingga rangkaian topik yang mungkin tidak diketahui. Pemodelan topik dapat digunakan untuk menyelesaikan masalah klasifikasi teks. Pemodelan topik akan mengidentifikasi topik yang disajikan dalam dokumen” sedangkan klasifikasi teks mengklasifikasikan teks ke dalam satu kelas.</p>
+<img src="https://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1538411402/image2_ndnai9.png"></section>
+</section>
+<section id="crawling-data">
+<h2>Crawling Data<a class="headerlink" href="#crawling-data" title="Permalink to this headline">#</a></h2>
+<p>Crawling data berita menggunakan modul beautifulsoup dan berikut tahapan yang dilakukan:</p>
+<section id="menginstal-modul">
+<h3>Menginstal Modul<a class="headerlink" href="#menginstal-modul" title="Permalink to this headline">#</a></h3>
+<p>Menginstal modul yang dibutuhkan</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install requests
+<span class="o">!</span>pip install html5lib
+<span class="o">!</span>pip install bs4
+<span class="o">!</span>pip install urllib3
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: requests in c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages (2.26.0)
+Requirement already satisfied: charset-normalizer~=2.0.0 in c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages (from requests) (2.0.7)
+Requirement already satisfied: certifi&gt;=2017.4.17 in c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages (from requests) (2021.10.8)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages (from requests) (1.26.7)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages (from requests) (3.3)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: html5lib in c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages (1.1)
+Requirement already satisfied: webencodings in c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages (from html5lib) (0.5.1)
+Requirement already satisfied: six&gt;=1.9 in c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages (from html5lib) (1.16.0)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: bs4 in c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages (0.0.1)
+Requirement already satisfied: beautifulsoup4 in c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages (from bs4) (4.11.1)
+Requirement already satisfied: soupsieve&gt;1.2 in c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages (from beautifulsoup4-&gt;bs4) (2.3.2.post1)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: urllib3 in c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages (1.26.7)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menentukan-direktori">
+<h3>Menentukan Direktori<a class="headerlink" href="#menentukan-direktori" title="Permalink to this headline">#</a></h3>
+<p>Memastikan bekerja dalam direktori yang diinginkan</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the current working directory</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;C:\\Users\\Arief Ralistiya\\OneDrive\\Documents\\Syarif\\Semester 7\\PPW\\Terakhir&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">&#39;Berita&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># change working directories</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;/content/Berita&#39;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="ne">C</span>:\Users\ARIEFR~1\AppData\Local\Temp/ipykernel_30768/2542405973.py in &lt;module&gt;
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># change working directories</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;/content/Berita&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+
+<span class="ne">FileNotFoundError</span>: [WinError 3] The system cannot find the path specified: &#39;/content/Berita&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="import-csv">
+<h3>Import CSV<a class="headerlink" href="#import-csv" title="Permalink to this headline">#</a></h3>
+<p>Membuat sebuah file csv dalam file dengan nama result.csv untuk menampung hasil crawling data berita</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;result.csv&quot;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="mendapatkan-data">
+<h3>Mendapatkan Data<a class="headerlink" href="#mendapatkan-data" title="Permalink to this headline">#</a></h3>
+<p>Untuk bisa crawlingh data yang mungkin sekali terdapat di lebih dari 1 halaman, kita perlu mencari pola URL nya. Caranya dengan melihat URL untuk halaman 2 atau seterusnya. Klik kanan dan “Open link in new tab”. Pola URL halaman pencarian yang muncul seperti berikut: <a class="reference external" href="https://www.detik.com/search/searchall?query=ihsg&amp;sortby=time&amp;page=2">https://www.detik.com/search/searchall?query=ihsg&amp;sortby=time&amp;page=2</a> <br>
+Perhatikan bagian URL yang ditebalkan,
+<a class="reference external" href="https://www.detik.com/search/searchall?query=ihsg&amp;sortby=time&amp;page=2">https://www.detik.com/search/searchall?query=ihsg&amp;sortby=time&amp;page=2</a>. Halaman 2 mengandung “page=2”, halaman 3 mengandung “page=3”, dst. Kita membutuhkan variabel GET dengan nama “page” sebagai basis iterasi pencarian data per halaman via script Python3 dan BeautifulSoup4 nanti.
+Hasil pencarian dapat disimpan dengan format file CSV (Comma Separated Values). Di dalam contoh skrip saya berikan nama filenya result.csv dengan header: Title, Date, Category, dan Summary. Header ini berguna jika file CSV tersebut dibuka di aplikasi Excel agar baris pertama berisi nama variabel.
+Iterasi “for page in range(1,5): ” bertujuan untuk penelusuran setiap halaman dari 1 sampai 5. URL penelusuran harus diatur agar iterasi dapat dilakukan.
+Saya gunakan pola berikut: url = “<a class="reference external" href="https://www.detik.com/search/searchnews?query=ihsg&amp;sortby=time&amp;page=%7B%7D%E2%80%9C.format(page)">https://www.detik.com/search/searchnews?query=ihsg&amp;sortby=time&amp;page={}“.format(page)</a> yang mana {} akan diganti dengan nilai variabel page pada skrip iterasi yaitu integer 1 sampai 5. Sehingga URL yang akan di-crawl adalah: <br></p>
+<ul> https://www.detik.com/search/searchnews?query=ihsg&sortby=time&page=1 </ul>
+<ul> https://www.detik.com/search/searchnews?query=ihsg&sortby=time&page=2 </ul>
+<ul> https://www.detik.com/search/searchnews?query=ihsg&sortby=time&page=3 </ul>
+<ul> https://www.detik.com/search/searchnews?query=ihsg&sortby=time&page=4 </ul>
+<ul> https://www.detik.com/search/searchnews?query=ihsg&sortby=time&page=5 </ul><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="n">file</span> <span class="o">=</span> <span class="s2">&quot;result.csv&quot;</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<span class="n">Headers</span> <span class="o">=</span> <span class="s2">&quot;Title,Category,Date,Summary</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="c1">#Pemisah menggunakan ,</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">Headers</span><span class="p">)</span>
+<span class="c1">#halaman dapat diatur sesuai range (1,5) berarti scrap data pada halaman 1 sampai dengan halaman 5</span>
+<span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.detik.com/search/searchnews?query=ihsg&amp;sortby=time&amp;page=</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+    <span class="n">html</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span><span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+    <span class="n">soup</span><span class="o">.</span><span class="n">prettify</span><span class="p">()</span>
+    <span class="n">Article</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;article&quot;</span><span class="p">)</span>
+    <span class="c1">#print(Article)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">Article</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1">#Mengambil Title</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;h2&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;class&quot;</span><span class="p">:</span><span class="s2">&quot;title&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span>
+            <span class="c1">#Mencari tanggal dan kategori</span>
+            <span class="n">date_and_category</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,{</span><span class="s2">&quot;class&quot;</span><span class="p">:</span><span class="s2">&quot;date&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span>
+            <span class="n">summary</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span>
+            <span class="c1">#Tulis data ke dalam file</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">title</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">,</span><span class="s2">&quot;|&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;, </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">date_and_category</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;  -  &quot;</span><span class="p">,</span><span class="s2">&quot;,&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="s2">&quot;, </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">summary</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span> <span class="ne">AttributeError</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menyimpan-data">
+<h3>Menyimpan Data<a class="headerlink" href="#menyimpan-data" title="Permalink to this headline">#</a></h3>
+<p>Simpan Data hasil crawling kedalam csv</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Load Dataset</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;result.csv&#39;</span><span class="p">)</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-d74ae534-5347-459a-ac10-50aaff19ad22">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Title</th>
+      <th>Category</th>
+      <th>Date</th>
+      <th>Summary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>IHSG Dibuka Menguat Lagi ke 7.099| Intip Rekom...</td>
+      <td>detikFinanceSelasa</td>
+      <td>25 Okt 2022 09:08 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) hari ini ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>IHSG Hijau Seharian| Sore Ini Ditutup di Level...</td>
+      <td>detikFinanceSenin</td>
+      <td>24 Okt 2022 16:14 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) hari ini ...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>IHSG Dibuka Menguat ke 7.041 di Awal Pekan</td>
+      <td>detikFinanceSenin</td>
+      <td>24 Okt 2022 09:10 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) hari ini ...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>IHSG Ditutup Menguat ke 7.017 Jelang Akhir Pekan</td>
+      <td>detikFinanceJumat</td>
+      <td>21 Okt 2022 16:09 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) hari ini ...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>IHSG Balik ke Level 7.000! Cek Rekomendasi Sah...</td>
+      <td>detikFinanceJumat</td>
+      <td>21 Okt 2022 09:10 WIB</td>
+      <td>IHSG berhasil kembali ke level 7.006. IHSG b...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>IHSG Hari Ini 'Kepeleset' tapi Balik Menguat k...</td>
+      <td>detikFinanceKamis</td>
+      <td>20 Okt 2022 09:08 WIB</td>
+      <td>IHSG sempat menyentuh zona merah dan berbali...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>IHSG Berhasil Mantul ke Zona Hijau| Tutup di 6...</td>
+      <td>detikFinanceRabu</td>
+      <td>19 Okt 2022 16:27 WIB</td>
+      <td>Indeks harga saham gabungan (IHSG) ditutup m...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>IHSG Dibuka Melemah Tipis| Intip Peluang Lajun...</td>
+      <td>detikFinanceRabu</td>
+      <td>19 Okt 2022 09:19 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) pagi ini ...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Masih Rugi dan Punya Utang| Kok Blibli Nekat IPO?</td>
+      <td>detikFinanceRabu</td>
+      <td>19 Okt 2022 06:00 WIB</td>
+      <td>Blibli mantap melantai di Bursa Efek Indones...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>IHSG Ditutup Menguat Setelah Tadi Pagi Menukik...</td>
+      <td>detikFinanceSenin</td>
+      <td>17 Okt 2022 16:00 WIB</td>
+      <td>Indeks harga saham gabungan (IHSG) ditutup m...</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Buka Awal Pekan| IHSG Rontok Makin Jauh dari 7...</td>
+      <td>detikFinanceSenin</td>
+      <td>17 Okt 2022 09:24 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) pagi ini ...</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Kemarin Rontok| Pagi Ini IHSG Bergairah Lagi</td>
+      <td>detikFinanceJumat</td>
+      <td>14 Okt 2022 09:12 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) pagi ini ...</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Jokowi ke BEI: Jangan Bangga Hanya Cetak Rekor...</td>
+      <td>detikFinanceKamis</td>
+      <td>13 Okt 2022 12:33 WIB</td>
+      <td>Presiden Joko Widodo (Jokowi) berpesan kepad...</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>IHSG Dibuka Menguat| tapi Tipis Banget</td>
+      <td>detikFinanceKamis</td>
+      <td>13 Okt 2022 09:10 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) pagi ini ...</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Sempat Menguat| IHSG Berakhir Tersungkur ke Le...</td>
+      <td>detikFinanceRabu</td>
+      <td>12 Okt 2022 16:05 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) sore ini ...</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Pagi-pagi IHSG Labil| Sempat Naik| Turun| Eh N...</td>
+      <td>detikFinanceRabu</td>
+      <td>12 Okt 2022 09:22 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) pagi ini ...</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Seharian Merah| IHSG Tersungkur di Level 6.939</td>
+      <td>detikFinanceSelasa</td>
+      <td>11 Okt 2022 16:05 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) sore ini ...</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>IHSG Masih Loyo| Makin Jauh dari Level 7.000</td>
+      <td>detikFinanceSelasa</td>
+      <td>11 Okt 2022 09:12 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) pagi ini ...</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>IHSG Diramal Melorot ke 6.000-an| Intip Saham-...</td>
+      <td>detikFinanceSelasa</td>
+      <td>11 Okt 2022 09:00 WIB</td>
+      <td>Untuk hari ini IHSG diprediksi bergerak mixe...</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>IHSG Diramal Lesu| Masalah Ini Jadi Pemicu</td>
+      <td>detikFinanceSelasa</td>
+      <td>11 Okt 2022 08:49 WIB</td>
+      <td>Untuk hari ini IHSG diprediksi melemah. Sima...</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Dolar AS Keok Lawan Rupiah| tapi Masih Betah d...</td>
+      <td>detikFinanceSenin</td>
+      <td>10 Okt 2022 10:09 WIB</td>
+      <td>Nilai tukar dolar Amerika Serikat (AS) terha...</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Makin Loyo| IHSG Dibuka Merosot ke Posisi 6.986</td>
+      <td>detikFinanceSenin</td>
+      <td>10 Okt 2022 09:20 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) pagi ini ...</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>IHSG Diramal Melemah tapi Masih di Kisaran 7.000</td>
+      <td>detikFinanceSenin</td>
+      <td>10 Okt 2022 09:04 WIB</td>
+      <td>Bagaimana dengan ramalan pergerakan IHSG har...</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>IHSG Hari Ini Balik Arah| Dibuka di Zona Merah</td>
+      <td>detikFinanceJumat</td>
+      <td>07 Okt 2022 09:17 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) pagi ini ...</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Ditutup di Zona Hijau| Penguatan IHSG Menciut</td>
+      <td>detikFinanceKamis</td>
+      <td>06 Okt 2022 16:31 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) pada sore...</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Hattrick! IHSG 3 Hari Dibuka Menguat Lagi</td>
+      <td>detikFinanceKamis</td>
+      <td>06 Okt 2022 09:19 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) pagi ini ...</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Intip Ramalan Laju IHSG Hari Ini</td>
+      <td>detikFinanceKamis</td>
+      <td>06 Okt 2022 08:45 WIB</td>
+      <td>IHSG diramal bakal bergerak mixed dalam leve...</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Seharian Hijau| IHSG Parkir di 7.075</td>
+      <td>detikFinanceRabu</td>
+      <td>05 Okt 2022 15:52 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) pada sore...</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Kompak dengan Bursa Asia| IHSG Menguat Lagi</td>
+      <td>detikFinanceRabu</td>
+      <td>05 Okt 2022 09:12 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) pada pagi...</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>IHSG Ijo Royo-royo| Kini Parkir di 7.072</td>
+      <td>detikFinanceSelasa</td>
+      <td>04 Okt 2022 16:33 WIB</td>
+      <td>Indeks Harga Saham Gabungan pada sore ini di...</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>Rebound| IHSG Lompat ke 7.069!</td>
+      <td>detikFinanceSelasa</td>
+      <td>04 Okt 2022 09:18 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) pada pagi...</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>Melemah Lagi| IHSG Ditutup Ambles</td>
+      <td>detikFinanceSenin</td>
+      <td>03 Okt 2022 15:27 WIB</td>
+      <td>Indeks harga saham gabungan (IHSG) ditutup m...</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>IHSG Terjun| Sempat Tinggalkan Level 7.000</td>
+      <td>detikFinanceSenin</td>
+      <td>03 Okt 2022 09:10 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) pada pagi...</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>Ambles! IHSG Lengser dari Level 7.000</td>
+      <td>detikFinanceJumat</td>
+      <td>30 Sep 2022 09:42 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) masih mel...</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>Pecah Telur 3 Hari! IHSG Akhirnya Dibuka Menguat</td>
+      <td>detikFinanceKamis</td>
+      <td>29 Sep 2022 09:11 WIB</td>
+      <td>Indeks Harga Saham Gabungan (IHSG) pada pagi...</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Kondisi Ekonomi Memprihatinkan| Rupiah Anjlok ...</td>
+      <td>detikSumutRabu</td>
+      <td>28 Sep 2022 17:40 WIB</td>
+      <td>Nilai tukar rupiah terhadap dolar AS saat in...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d74ae534-5347-459a-ac10-50aaff19ad22')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-d74ae534-5347-459a-ac10-50aaff19ad22 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-d74ae534-5347-459a-ac10-50aaff19ad22');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+</section>
+<section id="preprocessing-text">
+<h2>Preprocessing Text<a class="headerlink" href="#preprocessing-text" title="Permalink to this headline">#</a></h2>
+<p>Langkah pertama adalah mengubah ulasan ini menjadi matriks istilah dokumen atau document-term matrix.</p>
+<p>Untuk itu, kita harus melakukan beberapa preprocessing pada teks. Ini memerlukan huruf kecil semua teks, menghapus tanda baca, menghentikan kata, kata-kata pendek (yaitu kata-kata kurang dari 3 karakter), dan mengurangi setiap kata ke bentuk dasarnya dengan stemming.</p>
+<p>Semua ini dapat dicapai dengan fungsi preprocess_string, yang mengubah teks tertentu menjadi daftar token yang diproses.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># load data</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;result.csv&#39;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Summary&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-eb8f67b0-da6f-44d2-8bc8-5e235b1933c2">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Summary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) hari ini ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) hari ini ...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) hari ini ...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) hari ini ...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>IHSG berhasil kembali ke level 7.006. IHSG b...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>IHSG sempat menyentuh zona merah dan berbali...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Indeks harga saham gabungan (IHSG) ditutup m...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) pagi ini ...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Blibli mantap melantai di Bursa Efek Indones...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Indeks harga saham gabungan (IHSG) ditutup m...</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) pagi ini ...</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) pagi ini ...</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Presiden Joko Widodo (Jokowi) berpesan kepad...</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) pagi ini ...</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) sore ini ...</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) pagi ini ...</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) sore ini ...</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) pagi ini ...</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Untuk hari ini IHSG diprediksi bergerak mixe...</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Untuk hari ini IHSG diprediksi melemah. Sima...</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Nilai tukar dolar Amerika Serikat (AS) terha...</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) pagi ini ...</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Bagaimana dengan ramalan pergerakan IHSG har...</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) pagi ini ...</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) pada sore...</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) pagi ini ...</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>IHSG diramal bakal bergerak mixed dalam leve...</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) pada sore...</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) pada pagi...</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Indeks Harga Saham Gabungan pada sore ini di...</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) pada pagi...</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>Indeks harga saham gabungan (IHSG) ditutup m...</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) pada pagi...</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) masih mel...</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) pada pagi...</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Nilai tukar rupiah terhadap dolar AS saat in...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-eb8f67b0-da6f-44d2-8bc8-5e235b1933c2')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-eb8f67b0-da6f-44d2-8bc8-5e235b1933c2 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-eb8f67b0-da6f-44d2-8bc8-5e235b1933c2');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<section id="cleaning-text">
+<h3>Cleaning Text<a class="headerlink" href="#cleaning-text" title="Permalink to this headline">#</a></h3>
+<p>Preprocessing yang dibutuhkan dalam melakukan LSA adalah hanya membuat kata menjadi lower, melakukan stopwords, menghapus tanda baca, menghentikan kata, kata-kata pendek (yaitu kata-kata kurang dari 3 karakter), dan mengurangi setiap kata ke bentuk dasarnya dengan stemming.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import nltk</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;wordnet&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;omw-1.4&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span><span class="p">,</span><span class="n">sent_tokenize</span>
+
+<span class="c1">#preprocessing</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>  <span class="c1">#stopwords</span>
+<span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">word_tokenize</span><span class="p">,</span><span class="n">sent_tokenize</span> <span class="c1"># tokenizing</span>
+<span class="kn">from</span> <span class="nn">nltk.stem</span> <span class="kn">import</span> <span class="n">PorterStemmer</span><span class="p">,</span><span class="n">LancasterStemmer</span>  <span class="c1"># using the Porter Stemmer and Lancaster Stemmer and others</span>
+<span class="kn">from</span> <span class="nn">nltk.stem.snowball</span> <span class="kn">import</span> <span class="n">SnowballStemmer</span>
+<span class="kn">from</span> <span class="nn">nltk.stem</span> <span class="kn">import</span> <span class="n">WordNetLemmatizer</span>  <span class="c1"># lammatizer from WordNet</span>
+
+<span class="c1"># for named entity recognition (NER)</span>
+<span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">ne_chunk</span>
+
+<span class="c1">#stop-words</span>
+<span class="n">stop_words</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">nltk</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">))</span>
+
+<span class="c1"># vectorizers for creating the document-term-matrix (DTM)</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span><span class="p">,</span><span class="n">CountVectorizer</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package wordnet to /root/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /root/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">clean_text</span><span class="p">(</span><span class="n">headline</span><span class="p">):</span>
+  <span class="n">le</span><span class="o">=</span><span class="n">WordNetLemmatizer</span><span class="p">()</span>
+  <span class="n">word_tokens</span><span class="o">=</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">headline</span><span class="p">)</span>
+  <span class="n">tokens</span><span class="o">=</span><span class="p">[</span><span class="n">le</span><span class="o">.</span><span class="n">lemmatize</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">word_tokens</span> <span class="k">if</span> <span class="n">w</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">]</span>
+  <span class="n">cleaned_text</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">cleaned_text</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># time taking</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;headline_cleaned_text&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Summary&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">clean_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="preview-dataset">
+<h3>Preview Dataset<a class="headerlink" href="#preview-dataset" title="Permalink to this headline">#</a></h3>
+<p>Melihat Hasil Preprocessing Teks</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># preview of dataset</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-364cc060-d523-4331-b47b-ab8bbbdb9442">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Summary</th>
+      <th>headline_cleaned_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) hari ini ...</td>
+      <td>Indeks Harga Saham Gabungan IHSG dibuka mengua...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) hari ini ...</td>
+      <td>Indeks Harga Saham Gabungan IHSG ditutup mengu...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) hari ini ...</td>
+      <td>Indeks Harga Saham Gabungan IHSG dibuka mengua...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Indeks Harga Saham Gabungan (IHSG) hari ini ...</td>
+      <td>Indeks Harga Saham Gabungan IHSG ditutup mengu...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>IHSG berhasil kembali ke level 7.006. IHSG b...</td>
+      <td>IHSG berhasil level 7.006 IHSG level tertinggi...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-364cc060-d523-4331-b47b-ab8bbbdb9442')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-364cc060-d523-4331-b47b-ab8bbbdb9442 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-364cc060-d523-4331-b47b-ab8bbbdb9442');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+</section>
+<section id="mengubah-hasil-preprocessing-menjadi-document-term-matrix">
+<h2>Mengubah Hasil Preprocessing Menjadi Document Term Matrix<a class="headerlink" href="#mengubah-hasil-preprocessing-menjadi-document-term-matrix" title="Permalink to this headline">#</a></h2>
+<p>Sekarang, kita dapat mengubah ulasan yang telah diproses ini menjadi matriks istilah dokumen dengan model bag of words. Dan Selanjutnya memproses data menjadi sebuah TF-IDF atau Term Frequency.</p>
+<section id="tf-idf">
+<h3>TF-IDF<a class="headerlink" href="#tf-idf" title="Permalink to this headline">#</a></h3>
+<p>(Term Frequency-Inverse Document Frequency) : Representasi Vector Data Text <br>
+merupakan metode yang digunakan untuk menentukan nilai frekuensi sebuah kata di dalam sebuah dokumen atau artikel dan juga frekuensi di dalam banyak dokumen. Perhitungan ini menentukan seberapa relevan sebuah kata di dalam sebuah dokumen. <br></p>
+<p>Bagaimana TF-IDF bekerja? <br>
+Pada dasarnya, TF-IDF bekerja dalam menentukan frekuensi relatif suatu kata kemudian dibandingkan dengan proporsi kata tersebut pada seluruh dokumen. Intuisinya bahwa kata yang muncul di banyak dokumen bukanlah pembeda yang baik, dan harus diberi bobot kurang dari satu yang terjadi dalam beberapa dokumen. <br></p>
+<p>Rumus TF-IDF <br>
+Frekuensi istilah, tf(t, d) adalah frekuensi istilah t, <br>
+<img src ="https://wikimedia.org/api/rest_v1/media/math/render/svg/09d2ad7109a12acef6a03ad71a8d93f5166e2b3b"></p>
+<p>dengan <span class="texhtml" style="white-space: nowrap;"><i>f</i><sub><i>t</i>,<i>d</i></sub></span> adalah <i>pencacahan mentah</i> istilah dalam dokumen, yaitu jumlah kemunculan istilah <span class="texhtml mvar" style="font-style:italic;">t</span> dalam dokumen <span class="texhtml mvar" style="font-style:italic;">d</span>. Semakin sering suatu istilah muncul, semakin besar nilai tf-nya. Terdapat beberapa cara untuk mendefinisikan frekuensi istilah
+</section>
+<section id="term-frequency">
+<h3>Term Frequency<a class="headerlink" href="#term-frequency" title="Permalink to this headline">#</a></h3>
+<p>Term frequency yaitu jumlah kemunculan sebuah term pada sebuah dokumen. Inverse Document Frequency yaitu pengurangan dominasi term yang sering muncul diberbagai dokumen, dengan memperhitungkan kebalikan frekuensi dokumen yang mengandung suatu kata. <br></p>
+<p>Berikut Hasil Term Frequency menggunakan TfidVectorizer</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vect</span> <span class="o">=</span><span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">stop_words</span><span class="o">=</span><span class="n">stop_words</span><span class="p">,</span><span class="n">max_features</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vect_text</span><span class="o">=</span><span class="n">vect</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;headline_cleaned_text&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/feature_extraction/text.py:401: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens [&#39;baiknya&#39;, &#39;berkali&#39;, &#39;kali&#39;, &#39;kurangnya&#39;, &#39;mata&#39;, &#39;olah&#39;, &#39;sekurang&#39;, &#39;setidak&#39;, &#39;tama&#39;, &#39;tidaknya&#39;] not in stop_words.
+  % sorted(inconsistent)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vect_text</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.        , 0.        , 0.        , ..., 0.        , 0.        ,
+        0.19640219],
+       [0.        , 0.        , 0.        , ..., 0.        , 0.        ,
+        0.23814747],
+       [0.34972246, 0.        , 0.        , ..., 0.        , 0.        ,
+        0.        ],
+       ...,
+       [0.36699295, 0.        , 0.        , ..., 0.        , 0.        ,
+        0.        ],
+       [0.        , 0.        , 0.        , ..., 0.        , 0.        ,
+        0.29141666],
+       [0.        , 0.        , 0.        , ..., 0.23945836, 0.        ,
+        0.        ]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hasil data term frequency di shape untuk mengatahui hasil matrix.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">vect_text</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vect_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(36, 110)
+  (0, 50)	0.3211804714568847
+  (0, 40)	0.24040981869654232
+  (0, 109)	0.1964021851186655
+  (0, 82)	0.3498343165285299
+  (0, 60)	0.2807951450767135
+  (0, 8)	0.3902196429087011
+  (0, 56)	0.2117559736248971
+  (0, 88)	0.2521413000050683
+  (0, 64)	0.1831021285532519
+  (0, 30)	0.4408450434311649
+  (0, 41)	0.2160491900173806
+  (0, 38)	0.1273630136668491
+  (0, 97)	0.12386783152823938
+  (0, 39)	0.1273630136668491
+  (0, 42)	0.1273630136668491
+  (1, 98)	0.3218609126460267
+  (1, 22)	0.3057339292712595
+  (1, 6)	0.4731608217412492
+  (1, 35)	0.2567647024176508
+  (1, 40)	0.29150892179903704
+  (1, 109)	0.2381474664110318
+  (1, 56)	0.2567647024176508
+  (1, 88)	0.3057339292712595
+  (1, 64)	0.22202048303626462
+  (1, 41)	0.26197044188539914
+  :	:
+  (33, 42)	0.14552979559796708
+  (34, 79)	0.5190754303041437
+  (34, 62)	0.3141982302352328
+  (34, 75)	0.26272279883458616
+  (34, 40)	0.35671409062315884
+  (34, 109)	0.2914166619352544
+  (34, 30)	0.32705743805699367
+  (34, 41)	0.3205683976002615
+  (34, 38)	0.18897806190079894
+  (34, 97)	0.18379199785026937
+  (34, 39)	0.18897806190079894
+  (34, 42)	0.18897806190079894
+  (35, 26)	0.2671017407203712
+  (35, 51)	0.2671017407203712
+  (35, 102)	0.2671017407203712
+  (35, 67)	0.2671017407203712
+  (35, 81)	0.2671017407203712
+  (35, 11)	0.2671017407203712
+  (35, 19)	0.2671017407203712
+  (35, 9)	0.23945835789295197
+  (35, 96)	0.47891671578590395
+  (35, 36)	0.23945835789295197
+  (35, 107)	0.23945835789295197
+  (35, 72)	0.23945835789295197
+  (35, 77)	0.20463181426826232
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="idf">
+<h3>IDF<a class="headerlink" href="#idf" title="Permalink to this headline">#</a></h3>
+<p>Inverse Document Frequency (IDF) dalam ilmu informasi dan statistik, adalah metode untuk menentukan frekuensi kata dalam kumpulan data teks. Dalam kombinasi dengan Dalam Frekuensi Dokumen, Frekuensi Dokumen Balik membantu untuk membuat konten yang unik dan bahkan dapat mengganti kepadatan kata kunci sebagai skor kualitas yang telah lama digunakan untuk menentukan kualitas teks. <br></p>
+<p>Frekuensi Dokumen Invers ditentukan oleh perhitungan logaritmik. Ini adalah rasio dari semua teks dan dokumen yang ada dari seluruh dataset dan jumlah teks yang berisi kata kunci yang ditentukan. <br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idf</span><span class="o">=</span><span class="n">vect</span><span class="o">.</span><span class="n">idf_</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idf</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3.22462355, 3.91777073, 3.91777073, 3.91777073, 3.91777073,
+       3.91777073, 3.91777073, 3.91777073, 3.91777073, 3.51230562,
+       3.91777073, 3.91777073, 3.91777073, 3.91777073, 3.91777073,
+       3.91777073, 3.91777073, 3.91777073, 3.91777073, 3.91777073,
+       3.91777073, 3.51230562, 2.53147637, 3.91777073, 3.91777073,
+       3.91777073, 3.91777073, 3.51230562, 3.91777073, 3.91777073,
+       2.21302264, 3.91777073, 3.51230562, 3.51230562, 3.91777073,
+       2.12601126, 3.51230562, 3.51230562, 1.2787134 , 1.2787134 ,
+       2.41369334, 1.08455739, 1.2787134 , 3.51230562, 3.91777073,
+       3.91777073, 3.91777073, 3.91777073, 3.91777073, 3.91777073,
+       3.22462355, 3.91777073, 3.91777073, 3.91777073, 3.22462355,
+       3.91777073, 2.12601126, 3.91777073, 3.22462355, 3.91777073,
+       2.81915844, 3.91777073, 2.12601126, 3.91777073, 1.83832919,
+       3.91777073, 3.91777073, 3.91777073, 3.91777073, 3.00148   ,
+       3.51230562, 3.91777073, 3.51230562, 3.91777073, 3.91777073,
+       1.77770457, 3.91777073, 3.00148   , 3.51230562, 3.51230562,
+       3.91777073, 3.91777073, 3.51230562, 3.91777073, 3.91777073,
+       3.22462355, 3.51230562, 3.51230562, 2.53147637, 3.51230562,
+       3.91777073, 3.91777073, 3.91777073, 3.91777073, 3.91777073,
+       3.91777073, 3.51230562, 1.24362208, 2.66500776, 3.91777073,
+       3.91777073, 2.41369334, 3.91777073, 3.91777073, 3.91777073,
+       3.00148   , 3.51230562, 3.51230562, 3.91777073, 1.97186058])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="mengetahui-kata-yang-sering-ada">
+<h3>Mengetahui Kata yang Sering Ada<a class="headerlink" href="#mengetahui-kata-yang-sering-ada" title="Permalink to this headline">#</a></h3>
+<p>Mengetahui hasil nilai data yang sering keluar dalam topik yang ada.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dd</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">vect</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">(),</span> <span class="n">idf</span><span class="p">))</span>
+<span class="n">l</span><span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="n">dd</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="p">(</span><span class="n">dd</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
+<span class="c1"># print(l)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dd</span><span class="p">[</span><span class="s1">&#39;ihsg&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dd</span><span class="p">[</span><span class="s1">&#39;widodo&#39;</span><span class="p">])</span>  <span class="c1"># ihsg dan widodo merupakan kata yang sering muncul dalam headline</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ihsg widodo
+1.084557388028063
+3.917770732084279
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/deprecation.py:87: FutureWarning: Function get_feature_names is deprecated; get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead.
+  warnings.warn(msg, category=FutureWarning)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="lsa">
+<h2>LSA<a class="headerlink" href="#lsa" title="Permalink to this headline">#</a></h2>
+<p>SVD menguraikan DTM asli menjadi tiga matriks S=U.(sigma).(V.T). Di sini matriks U menunjukkan matriks dokumen-topik sementara (V) adalah matriks topik-term. <br></p>
+<p>Setiap baris dari matriks U (matriks istilah dokumen) adalah representasi vektor dari dokumen yang sesuai. Panjang vektor ini adalah jumlah topik yang diinginkan. Representasi vektor untuk suku-suku dalam data kami dapat ditemukan dalam matriks V (matriks istilah-topik).</p>
+<p>Jadi, SVD memberi kita vektor untuk setiap dokumen dan istilah dalam data kita. Panjang setiap vektor adalah k. Kami kemudian dapat menggunakan vektor-vektor ini untuk menemukan kata-kata dan dokumen serupa menggunakan metode kesamaan kosinus.</p>
+<p>Kita dapat menggunakan fungsi truncatedSVD untuk mengimplementasikan LSA. Parameter n_components adalah jumlah topik yang ingin kita ekstrak. Model tersebut kemudian di fit dan ditransformasikan pada hasil yang diberikan oleh vectorizer.</p>
+<p>Terakhir perhatikan bahwa LSA dan LSI (I untuk pengindeksan) adalah sama dan yang terakhir kadang-kadang digunakan dalam konteks pencarian informasi.</p>
+<section id="svd">
+<h3>SVD<a class="headerlink" href="#svd" title="Permalink to this headline">#</a></h3>
+<p>SVD atau Singular Value Decomposition, memiliki beragam aplikasi. Ini termasuk pengurangan dimensi, kompresi gambar, dan denoising data. Pada intinya, SVD menyatakan bahwa suatu matriks dapat direpresentasikan sebagai produk dari tiga matriks lainnya. Rumus SVD dapat dijabarkan sebagai berikut: <br></p>
+<img src="https://miro.medium.com/max/335/1*P4VgGcZYQl04Jqa4NW9b4A.png">
+<p>di mana n adalah jumlah baris (yaitu sampel) dan p mewakili jumlah dimensi.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">TruncatedSVD</span>
+<span class="n">lsa_model</span> <span class="o">=</span> <span class="n">TruncatedSVD</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;randomized&#39;</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="n">lsa_top</span><span class="o">=</span><span class="n">lsa_model</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">vect_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hasil SVD di shape</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lsa_top</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lsa_top</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 5.84875151e-01 -1.20933298e-01  2.92917688e-01 -8.96867746e-02
+  -4.71545609e-02 -2.08929285e-01  6.75476722e-02 -6.99774296e-02
+  -1.40353625e-01 -3.95790578e-01]
+ [ 6.56432029e-01  3.60306912e-01  2.35454147e-01  7.91806990e-02
+   1.66978567e-02 -1.86141770e-01  4.60956140e-03 -1.91494497e-02
+   1.16703355e-02 -9.41759752e-02]
+ [ 4.76945285e-01 -9.97645455e-02  5.54106591e-01  4.65233416e-03
+  -3.06846568e-02 -1.73932520e-01 -1.29097355e-02  1.04330311e-02
+   1.30066709e-02 -7.85580478e-02]
+ [ 5.43267100e-01  1.35404364e-01  4.08065803e-01 -9.14160316e-02
+   1.26264290e-01 -2.67533038e-01 -1.10666146e-02  7.40132609e-02
+   4.57869488e-02  1.02484970e-01]
+ [ 1.45788078e-01 -6.02293325e-03  3.83914528e-01  1.95456550e-01
+  -9.81658404e-02 -2.16407582e-02 -4.10860590e-02 -1.78834306e-02
+   8.45403218e-02  3.69725262e-02]
+ [ 2.95279498e-01  1.90442303e-01  3.43846150e-01  1.04993142e-01
+   6.74109399e-02 -2.22734643e-01 -2.89982494e-01 -1.44866721e-01
+   1.99596766e-01 -8.29573843e-02]
+ [ 6.00426379e-01  4.97900842e-01 -1.74716269e-01  1.37397629e-01
+  -4.85033461e-02  1.94143062e-01  3.22984381e-01  1.04653593e-01
+  -1.55384854e-01 -2.13898897e-01]
+ [ 4.70658013e-01 -3.83756843e-01 -2.10657883e-01  8.08848828e-04
+   1.49689717e-01  1.29952132e-01  2.42558579e-01  3.35364498e-02
+  -2.20015240e-01  9.80316564e-02]
+ [ 3.53694892e-02 -4.10863730e-02 -2.72940000e-02 -2.42323933e-02
+  -4.02953551e-02 -3.20081908e-02  5.46360383e-03  6.87333906e-01
+   3.56542510e-01 -1.11411256e-01]
+ [ 6.00426379e-01  4.97900842e-01 -1.74716269e-01  1.37397629e-01
+  -4.85033461e-02  1.94143062e-01  3.22984381e-01  1.04653593e-01
+  -1.55384854e-01 -2.13898897e-01]
+ [ 4.70521964e-01 -4.54809850e-01 -2.37815996e-01  6.96263783e-02
+  -1.14747627e-01 -2.00734170e-01 -6.12968283e-02  1.58639759e-01
+  -1.39265651e-02 -5.05759761e-02]
+ [ 6.58168638e-01 -3.02728402e-01 -1.89781346e-01 -1.49000755e-02
+  -4.24957848e-02 -3.12939267e-01 -4.11600207e-02  3.62594126e-02
+  -9.82032450e-02 -5.26236802e-02]
+ [ 1.61322088e-01 -4.42874200e-02 -3.80663859e-04 -6.71324688e-02
+  -3.79935430e-02  3.56823616e-02  3.42122441e-02  6.17261268e-01
+   3.45086298e-01 -4.65043632e-02]
+ [ 5.56046848e-01 -2.27439544e-01 -3.06646689e-02 -3.06112414e-01
+   6.24440133e-02 -1.48841730e-01  2.19694058e-01  2.61294864e-02
+  -1.64536691e-01  1.85404873e-01]
+ [ 7.64921502e-01  2.48878360e-01 -1.03434666e-01 -9.00484548e-02
+   5.85609732e-02  1.28192555e-01 -1.89824263e-01 -3.90515399e-02
+   1.46346361e-01  1.80671596e-01]
+ [ 4.53086225e-01 -3.43614771e-01 -6.07300030e-02 -1.45043708e-01
+  -1.52696820e-01  6.03039884e-03  3.73230494e-01 -2.34129702e-01
+   3.61343441e-01 -3.95497746e-02]
+ [ 6.48908176e-01  1.23461980e-01 -2.56443820e-01  1.09844868e-01
+  -3.73498567e-03  1.89756624e-01 -4.11313392e-01 -1.25181790e-01
+   2.12620994e-01  1.25127556e-01]
+ [ 4.58288872e-01 -1.67262925e-01  3.77194141e-01 -3.53503270e-02
+  -1.12564604e-01  4.82945536e-01 -1.93145127e-01 -7.34004713e-03
+  -1.90296200e-02 -1.00890618e-01]
+ [ 1.37766024e-01  7.33807552e-02  2.90904272e-01  5.15695986e-01
+  -3.01544941e-01 -2.27612234e-02  2.17833539e-01  8.24953933e-02
+  -1.22543797e-01  3.23922385e-01]
+ [ 1.41325067e-01 -1.32920760e-01 -8.71431193e-02  4.07347824e-01
+  -1.51271925e-01 -9.16251265e-02 -8.03873652e-02  7.64786386e-03
+  -2.16469281e-02  4.27249943e-01]
+ [ 1.26412273e-01 -1.92646228e-01  9.40471508e-02  4.86025436e-01
+   6.60899780e-01 -6.74527470e-02  1.30522613e-02 -1.52386873e-02
+   1.06420198e-01 -5.63253099e-02]
+ [ 4.68571077e-01 -3.73179726e-01  4.99941143e-02 -5.72898375e-02
+   2.29888262e-01  4.22832019e-01  1.14807989e-01  3.01700725e-02
+  -1.18113182e-01  8.70884739e-02]
+ [ 1.13860053e-01 -8.05397030e-02  1.73616242e-02 -3.92810101e-02
+  -1.57543151e-01  7.02627053e-02  4.46656848e-01 -3.68788441e-01
+   6.58083065e-01  6.76509401e-02]
+ [ 6.05007296e-01 -5.40870790e-02 -1.57041423e-01  1.96703421e-01
+  -1.32663730e-01 -1.83896124e-01 -4.93757326e-02 -1.24946715e-01
+  -4.98795683e-02 -3.21472167e-01]
+ [ 4.84602442e-01  2.69114787e-01 -3.77437612e-02 -2.80037337e-01
+   1.72631494e-01 -1.16532398e-01  5.40884112e-02  3.89992413e-02
+  -2.84458961e-02  4.34028782e-01]
+ [ 6.10871242e-01 -2.09972574e-01  2.12878116e-01 -2.76899855e-01
+   1.50132505e-02  2.05257227e-01  5.79165881e-02  3.94432253e-02
+  -1.35191752e-01  1.10180511e-02]
+ [ 1.31600326e-01  8.58400175e-02  3.01015800e-01  4.28612762e-01
+  -2.62448594e-01  3.06049669e-03  2.46318283e-01  8.00680139e-02
+  -1.14745472e-01  1.35521318e-01]
+ [ 7.26306393e-01  4.12243695e-01 -1.38899894e-01 -1.70404459e-01
+   1.05062014e-01 -3.86160194e-02  1.23573870e-03 -2.94080202e-02
+  -9.12578688e-03  1.25234091e-01]
+ [ 6.98969783e-01 -4.36807829e-02  2.61416619e-01 -2.65351773e-01
+   1.39588023e-01 -1.83167640e-01  6.70433513e-02  4.90807476e-02
+  -2.71866205e-02  1.51407806e-01]
+ [ 7.18947214e-01  4.77992909e-01 -1.41340168e-01 -1.23987502e-01
+   8.36816980e-02 -3.62238322e-02 -7.65493715e-02 -3.61033102e-02
+   3.91047306e-02 -1.00588018e-03]
+ [ 4.70453097e-01 -3.52047753e-01 -1.91813135e-01  9.06790462e-02
+  -8.67943681e-02 -5.22601056e-02 -1.25384848e-01  9.47570640e-02
+  -1.37212846e-02  1.33229895e-01]
+ [ 6.50013175e-01  3.12382120e-01 -2.45801010e-01  2.93782174e-01
+  -7.22998045e-02  1.60863135e-01 -1.16694331e-01 -5.48570996e-04
+   1.10211853e-01  2.22589768e-02]
+ [ 6.60844472e-01 -4.84027518e-01 -2.48549491e-01  1.90708765e-01
+  -7.78355397e-02 -1.02896604e-01 -7.78290836e-02 -2.61587364e-02
+  -6.90649926e-03  5.38140657e-03]
+ [ 4.39470035e-01 -2.28484233e-01  3.86031992e-01 -4.73655733e-02
+  -1.09678478e-01  5.07683182e-01 -2.22210494e-01  2.74153929e-03
+   5.75715859e-04 -8.33134193e-03]
+ [ 6.93318254e-01 -2.10068145e-01 -2.35195918e-01  1.23089905e-01
+  -1.02779839e-01 -1.99405613e-02 -1.18226666e-01 -1.15116950e-01
+   2.14312810e-02 -2.05119381e-01]
+ [ 1.93841146e-02 -1.00516833e-01  3.74345105e-02  3.31520372e-01
+   7.37991625e-01  9.75900166e-02  1.49427234e-01 -3.11753714e-03
+   1.05980609e-01 -6.31985213e-02]]
+(36, 10)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mirip dengan dokumen lain kita bisa melakukan ini. Namun perhatikan bahwa nilai tidak menambah 1 seperti di LSA itu bukan kemungkinan topik dalam dokumen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span><span class="o">=</span><span class="n">lsa_top</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Document 0 :&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">topic</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Topic &quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="s2">&quot; : &quot;</span><span class="p">,</span><span class="n">topic</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Document 0 :
+Topic  0  :  58.48751514341895
+Topic  1  :  -12.093329753351522
+Topic  2  :  29.29176883622418
+Topic  3  :  -8.968677459296185
+Topic  4  :  -4.715456091302982
+Topic  5  :  -20.89292846477461
+Topic  6  :  6.7547672191680785
+Topic  7  :  -6.997742963523714
+Topic  8  :  -14.035362533699786
+Topic  9  :  -39.57905779842051
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lsa_model</span><span class="o">.</span><span class="n">components_</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1"># (no_of_topics*no_of_words)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lsa_model</span><span class="o">.</span><span class="n">components_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(10, 110)
+[[ 5.24597635e-02  5.71429036e-03  6.58506140e-03 ...  4.01956316e-03
+   5.23767448e-03  2.15705068e-01]
+ [-6.51691007e-02 -8.08051247e-04  1.47022329e-02 ... -2.72053509e-02
+  -4.92170651e-03  2.43404460e-01]
+ [ 2.29368646e-01  6.87649508e-02  6.88310912e-02 ...  1.63659180e-02
+  -5.64784916e-05 -6.88470102e-02]
+ ...
+ [ 1.72425055e-03 -5.42696811e-03  3.10210770e-02 ... -3.90746430e-03
+   1.55164986e-01 -1.08043589e-01]
+ [-1.63437883e-03  2.61556322e-02 -4.53125319e-02 ...  4.48824267e-02
+   8.84379719e-02  6.80050535e-02]
+ [-5.88372360e-02  1.20480713e-02  5.63708577e-02 ... -2.65315572e-02
+  -1.25510793e-02 -2.10183928e-01]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># kata-kata paling penting untuk setiap topik</span>
+<span class="n">vocab</span> <span class="o">=</span> <span class="n">vect</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">comp</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lsa_model</span><span class="o">.</span><span class="n">components_</span><span class="p">):</span>
+    <span class="n">vocab_comp</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">vocab</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span>
+    <span class="n">sorted_words</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">vocab_comp</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:</span><span class="mi">10</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Topic &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;: &quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">sorted_words</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Topic 0: 
+ihsg gabungan harga indeks menguat saham pagi zona ditutup melemah 
+
+Topic 1: 
+sore ditutup zona hijau seharian bergerak menguat mayoritas didominasi positif 
+
+Topic 2: 
+level poin 000 melanjutkan menguat tren mixed 017 041 kokoh 
+
+Topic 3: 
+melemah bergerak diprediksi mixed level dolar rupiah 081 929 analisanya 
+
+Topic 4: 
+rupiah dolar pelemahan 15 nilai tukar menguat poin 200 angka 
+
+Topic 5: 
+melanjutkan tren pelemahan 000 pelemahannya pagi lengser menjauh negatifnya mayoritas 
+
+Topic 6: 
+pergerakan ramalan laju bergerak didominasi positif labil mixed pelemahan tipi 
+
+Topic 7: 
+bursa efek indonesia perdana berpesan cetak jemawa joko jokowi presiden 
+
+Topic 8: 
+pergerakan ramalan merah labil bursa efek indonesia berpesan cetak jemawa 
+
+Topic 9: 
+diprediksi tipi analisanya simak mixed menguat jelang menipis penguatannya penutupan 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="kesimpulan">
+<h2>Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permalink to this headline">#</a></h2>
+<p>Jadi, Hasil LSA pada topik berita yang diangkat adalah: <br>
+Topic 0:
+ihsg gabungan harga indeks menguat saham pagi zona ditutup melemah</p>
+<p>Topic 1:
+sore ditutup zona hijau seharian bergerak menguat mayoritas didominasi positif</p>
+<p>Topic 2:
+level poin 000 melanjutkan menguat tren mixed 017 041 kokoh</p>
+<p>Topic 3:
+melemah bergerak diprediksi mixed level dolar rupiah 081 929 analisanya</p>
+<p>Topic 4:
+rupiah dolar pelemahan 15 nilai tukar menguat poin 200 angka</p>
+<p>Topic 5:
+melanjutkan tren pelemahan 000 pelemahannya pagi lengser menjauh negatifnya mayoritas</p>
+<p>Topic 6:
+pergerakan ramalan laju bergerak didominasi positif labil mixed pelemahan tipi</p>
+<p>Topic 7:
+bursa efek indonesia perdana berpesan cetak jemawa joko jokowi presiden</p>
+<p>Topic 8:
+pergerakan ramalan merah labil bursa efek indonesia berpesan cetak jemawa</p>
+<p>Topic 9:
+diprediksi tipi analisanya simak mixed menguat jelang menipis penguatannya penutupan</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="UTS_PPW.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">UTS</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Bagging_Classifier.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bagging Classifier (Ensemble Learning), Grid Search dan Random Forest</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By 19-005 Moh. Syarif Hidayatullah Ralistiya<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

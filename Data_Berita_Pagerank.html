@@ -1,0 +1,2311 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Pagerank &#8212; Universitas Trunojoyo Madura</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="UTS" href="UTS_PPW.html" />
+    <link rel="prev" title="Data Web Twitter" href="Data_Twitter.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Universitas Trunojoyo Madura</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="notebooks.html">
+                    Pencarian dan Penambangan Web
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Data_Abstrak_PTA.html">
+   Data Abstrak PTA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Data_Twitter.html">
+   Data Web Twitter
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Pagerank
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="UTS_PPW.html">
+   UTS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="LSA.html">
+   Latent Semantic Analytic (LSA)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Bagging_Classifier.html">
+   Bagging Classifier (Ensemble Learning), Grid Search dan Random Forest
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ensemble_Stacking.html">
+   Ensemble Stacking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="about_me.html">
+   About Me
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/MohSyarif190005/web_mining/master?urlpath=tree/docs/Data_Berita_Pagerank.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/drive/1lMMiXxFY2mtMyc9xYAXo-JJqxdqT-C2t?usp=sharing/github/MohSyarif190005/web_mining/blob/master/docs/Data_Berita_Pagerank.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/MohSyarif190005/web_mining"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/MohSyarif190005/web_mining/issues/new?title=Issue%20on%20page%20%2FData_Berita_Pagerank.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Data_Berita_Pagerank.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   PageRank
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pengertian-pagerank">
+     Pengertian Pagerank
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#algoritma-pagerank">
+     Algoritma PageRank
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rumus-pagerank">
+     Rumus Pagerank
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-berita">
+   Data Berita
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crawling-data">
+   Crawling Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pengertian-bahasa-pemrograman-r">
+     Pengertian Bahasa Pemrograman R
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pengertian-rvest">
+     Pengertian Rvest
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menyiapkan-library">
+     Menyiapkan Library
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menyiapkan-link">
+     Menyiapkan Link
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mengambil-judul">
+     Mengambil Judul
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mengambil-tanggal-berita">
+     Mengambil Tanggal Berita
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mengambil-isi-berita">
+     Mengambil Isi Berita
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menggabungkan-function">
+     Menggabungkan Function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#memastikan-direktori">
+     Memastikan Direktori
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-csv">
+     Import CSV
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#memanggil-function">
+     Memanggil Function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menyimpan-data">
+     Menyimpan Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#melihat-data">
+     Melihat Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-dataset">
+     Load Dataset
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membuang-data">
+     Membuang Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mengubah-file-csv-dalam-bentuk-pdf">
+   Mengubah File CSV dalam Bentuk PDF
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convert-csv-kedalam-bentuk-html">
+     Convert CSV kedalam Bentuk HTML
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convert-html-menjadi-pdf-menggunakan-pdfkit">
+     Convert HTML Menjadi PDF Menggunakan pdfkit
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membaca-dokumen">
+   Membaca Dokumen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install-library">
+     Install Library
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-library">
+     Import Library
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menginputkan-file-dokumen">
+     Menginputkan File Dokumen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membuka-file-dokumen">
+     Membuka File Dokumen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tokenisasi">
+   Tokenisasi
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#memecah-menjadi-beberapa-kalimat">
+     Memecah Menjadi Beberapa Kalimat
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#memecah-kalimat-menjadi-beberapa-kata">
+     Memecah Kalimat Menjadi Beberapa Kata
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matriks-tf-idf">
+   Matriks TF-IDF
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membuat-n-graph-dengan-menggunakan-networkx">
+   Membuat N-Graph dengan Menggunakan networkx
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-modul">
+     Import Modul
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membuat-n-graph">
+     Membuat N-Graph
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#banyak-sisi">
+     Banyak Sisi
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#normal-matrix-shape">
+     Normal Matrix Shape
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Pagerank
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ranking-kalimat">
+     Ranking Kalimat
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mengurutkan-nilai-pagerank-dari-yang-terbesar-ke-yang-terkecil">
+     Mengurutkan Nilai Pagerank dari Yang terbesar Ke yang Terkecil
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menyimpulkan-kalimat-berdasarkan-hasil-nilai-pagerank">
+     Menyimpulkan Kalimat Berdasarkan Hasil Nilai PageRank
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kesimpulan">
+   Kesimpulan
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Pagerank</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   PageRank
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pengertian-pagerank">
+     Pengertian Pagerank
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#algoritma-pagerank">
+     Algoritma PageRank
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rumus-pagerank">
+     Rumus Pagerank
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-berita">
+   Data Berita
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crawling-data">
+   Crawling Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pengertian-bahasa-pemrograman-r">
+     Pengertian Bahasa Pemrograman R
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pengertian-rvest">
+     Pengertian Rvest
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menyiapkan-library">
+     Menyiapkan Library
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menyiapkan-link">
+     Menyiapkan Link
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mengambil-judul">
+     Mengambil Judul
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mengambil-tanggal-berita">
+     Mengambil Tanggal Berita
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mengambil-isi-berita">
+     Mengambil Isi Berita
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menggabungkan-function">
+     Menggabungkan Function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#memastikan-direktori">
+     Memastikan Direktori
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-csv">
+     Import CSV
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#memanggil-function">
+     Memanggil Function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menyimpan-data">
+     Menyimpan Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#melihat-data">
+     Melihat Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-dataset">
+     Load Dataset
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membuang-data">
+     Membuang Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mengubah-file-csv-dalam-bentuk-pdf">
+   Mengubah File CSV dalam Bentuk PDF
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convert-csv-kedalam-bentuk-html">
+     Convert CSV kedalam Bentuk HTML
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convert-html-menjadi-pdf-menggunakan-pdfkit">
+     Convert HTML Menjadi PDF Menggunakan pdfkit
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membaca-dokumen">
+   Membaca Dokumen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install-library">
+     Install Library
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-library">
+     Import Library
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menginputkan-file-dokumen">
+     Menginputkan File Dokumen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membuka-file-dokumen">
+     Membuka File Dokumen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tokenisasi">
+   Tokenisasi
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#memecah-menjadi-beberapa-kalimat">
+     Memecah Menjadi Beberapa Kalimat
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#memecah-kalimat-menjadi-beberapa-kata">
+     Memecah Kalimat Menjadi Beberapa Kata
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matriks-tf-idf">
+   Matriks TF-IDF
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membuat-n-graph-dengan-menggunakan-networkx">
+   Membuat N-Graph dengan Menggunakan networkx
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-modul">
+     Import Modul
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membuat-n-graph">
+     Membuat N-Graph
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#banyak-sisi">
+     Banyak Sisi
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#normal-matrix-shape">
+     Normal Matrix Shape
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Pagerank
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ranking-kalimat">
+     Ranking Kalimat
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mengurutkan-nilai-pagerank-dari-yang-terbesar-ke-yang-terkecil">
+     Mengurutkan Nilai Pagerank dari Yang terbesar Ke yang Terkecil
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#menyimpulkan-kalimat-berdasarkan-hasil-nilai-pagerank">
+     Menyimpulkan Kalimat Berdasarkan Hasil Nilai PageRank
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kesimpulan">
+   Kesimpulan
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="pagerank">
+<h1>Pagerank<a class="headerlink" href="#pagerank" title="Permalink to this headline">#</a></h1>
+<section id="id1">
+<h2>PageRank<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<section id="pengertian-pagerank">
+<h3>Pengertian Pagerank<a class="headerlink" href="#pengertian-pagerank" title="Permalink to this headline">#</a></h3>
+<p>PageRank adalah algoritme otoritas tautan yang dibuat oleh Google. Ini berguna untuk membantu mesin telusur membandingkan halaman yang memenuhi syarat untuk kueri tertentu berdasarkan seberapa sering mereka direferensikan berupa tautan di halaman situs lain. PageRank merupakan istilah untuk mengambarkan skor situs berdasarkan kalkulasi dari kuantitas dan kualitas tautan masuk. Ini dilakukan algoritma Google sebagai salah satu faktor penentu peringkat sebuah website. <br></p>
+<p>PageRank merupakan salah satu fitur utama mesin pencari Google yang diciptakan oleh pendirinya Larry Page dan Sergey Brin yang merupakan mahasiswa Ph.D. Universitas Stanford. <br></p>
+<p>Pagerank, memiliki konsep dasar
+yang sama dengan link popularity, tetapi
+tidak hanya memperhitungkan “jumlah”
+inbound dan outbound link. Pendekatan
+yang digunakan adalah sebuah halaman
+akan diangap penting jika halaman lain
+memiliki link ke halaman tersebut. Sebuah
+halaman juga akan menjadi semakin
+penting jika halaman lain yang memiliki
+rangking (Pagerank) tinggi mengacu ke
+halaman tersebut. <br></p>
+<p>Dengan pendekatan yang
+digunakan Pagerank, proses terjadi secara
+rekursif dimana sebuah rangking akan
+ditentukan oleh rangking dari halaman
+web lain yang memiliki link ke halaman
+tersebut. Proses ini berarti suatu proses
+yang berulang (rekursif). Di dunia maya,
+ada jutaan bahkan milyaran halaman web.
+Oleh karena itu sebuah rangking halaman
+web ditentukan dari struktur link dari
+keseluruhan halaman web yang ada di
+dunia maya. Sebuah proses yang sangat
+besar dan kompleks.</p>
+</section>
+<section id="algoritma-pagerank">
+<h3>Algoritma PageRank<a class="headerlink" href="#algoritma-pagerank" title="Permalink to this headline">#</a></h3>
+<li>Inisialisasi PageRank setiap node dengan nilai 1
+<li>Untuk setiap iterasi, perbarui PageRank setiap node dalam grafik
+<li>PageRank baru adalah jumlah dari peringkat proporsional dari semua induk dari isi
+<li>Terapkan jalan acak ke PageRank baru
+<li>Nilai PageRank akan menyatu setelah iterasi yang cukup</section>
+<section id="rumus-pagerank">
+<h3>Rumus Pagerank<a class="headerlink" href="#rumus-pagerank" title="Permalink to this headline">#</a></h3>
+<img src="https://miro.medium.com/max/828/1*tn-XPR8e15EHAfXcU8Da5A.png"></section>
+</section>
+<section id="data-berita">
+<h2>Data Berita<a class="headerlink" href="#data-berita" title="Permalink to this headline">#</a></h2>
+<p>Data berita merupakan sebuah dataset yang berisi tentang berita aktual yang ada di website. Data Berita yang digunakan berdasarkan dari website <a class="reference external" href="http://www.detik.com">www.detik.com</a> dan akan dilakukan beberapa analisis, yaitu n-graph dan pagerank agar mendapatkan rangkuman yang lebih baik. Untuk melakukan hal tersebut dilakukan beberapa tahapan, diantaranya:</p>
+</section>
+<section id="crawling-data">
+<h2>Crawling Data<a class="headerlink" href="#crawling-data" title="Permalink to this headline">#</a></h2>
+<p>Crawling data berita menggunakan modul rvest menggunakan bahasa pemrograman R dan berikut tahapan yang dilakukan:</p>
+<section id="pengertian-bahasa-pemrograman-r">
+<h3>Pengertian Bahasa Pemrograman R<a class="headerlink" href="#pengertian-bahasa-pemrograman-r" title="Permalink to this headline">#</a></h3>
+<p>R adalah bahasa pemrograman dan software bebas yang dikembangkan oleh Ross Ihaka dan Robert Gentleman pada tahun 1993. R memiliki katalog ekstensif metode statistik dan grafis. Ini meliputi algoritma machine learning, regresi linier, time series, inferensi statistik untuk beberapa hal. Saat ini, R merupakan software yang sangat terkenal karena memiliki berbagai fitur mulai dari membaca teks, database, menghasilkan dashboard, hingga penggunaan machine learning. Perbedaan yang sangat terlihat dari kedua bahasa ini adalah R digunakan untuk analisis statistik, sedangkan Python lebih general. <br><br>
+Python adalah bahasa multipurpose, sama seperti C++ dan Java. Penggunaannya pun cenderung lebih mudah dipelajari, tak seperti R yang lebih kompleks. Beberapa kelebihan R diantaranya adalah: Bersifat open source, sehingga bisa dinikmati oleh siapa saja secara gratis tanpa harus membayar lisensi. <br><br>
+Banyak package dan function di R yang dapat mempermudah pekerjaan praktisi data. Bahasa Pemrograman R merupakan tool pengolahan data yang bersifat open source. Yang dimaksud open source adalah bahasa pemrograman yang gratis untuk digunakan dan dapat dimodifikasi oleh siapapun, sehingga bahasa R memiliki banyak pengguna aktif di seluruh dunia yang berkontribusi dalam perkembangannya.</p>
+</section>
+<section id="pengertian-rvest">
+<h3>Pengertian Rvest<a class="headerlink" href="#pengertian-rvest" title="Permalink to this headline">#</a></h3>
+<p>Rvest adalah paket baru yang memudahkan untuk mengikis (atau memanen) data dari halaman web html, terinspirasi oleh perpustakaan seperti sup yang indah. Ini dirancang untuk bekerja dengan magrittr sehingga Anda dapat mengekspresikan operasi kompleks sebagai saluran pipa elegan yang terdiri dari bagian-bagian sederhana yang mudah dipahami.</p>
+</section>
+<section id="menyiapkan-library">
+<h3>Menyiapkan Library<a class="headerlink" href="#menyiapkan-library" title="Permalink to this headline">#</a></h3>
+<p>Menyiapkan library yang dibutuhkan dan mengaktivasi program agar untuk pemrograman bahasa R bisa di run dalam satu notebook.</p>
+<li>rvest untuk web scraping.
+<li>dplyr untuk data carpentry.
+<li>stringr untuk cleaning data berupa teks.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install rpy2
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting rpy2
+  Using cached rpy2-3.5.6.tar.gz (211 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status &#39;done&#39;
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status &#39;error&#39;
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+  error: subprocess-exited-with-error
+  
+  Getting requirements to build wheel did not run successfully.
+  exit code: 1
+  
+  [8 lines of output]
+  Unable to determine R home: [WinError 2] The system cannot find the file specified
+  Unable to determine R home.
+  cffi mode is CFFI_MODE.ANY
+  Looking for R home with: R RHOME
+  Unable to determine R home: [WinError 2] The system cannot find the file specified
+  Unable to determine R home.
+  R home found: None
+  Error: rpy2 in API mode cannot be built without R in the PATH or R_HOME defined. Correct this or force ABI mode-only by defining the environment variable RPY2_CFFI_MODE=ABI
+  [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+Getting requirements to build wheel did not run successfully.
+exit code: 1
+
+See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>conda install -c r r-essentials --yes
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;conda&#39; is not recognized as an internal or external command,
+operable program or batch file.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>conda install r-ggplot2
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;conda&#39; is not recognized as an internal or external command,
+operable program or batch file.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install <span class="nv">rpy2</span><span class="o">==</span><span class="m">3</span>.5.1
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting rpy2==3.5.1
+  Using cached rpy2-3.5.1.tar.gz (201 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status &#39;error&#39;
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+  error: subprocess-exited-with-error
+  
+  python setup.py egg_info did not run successfully.
+  exit code: 1
+  
+  [5 lines of output]
+  Unable to determine R home: [WinError 2] The system cannot find the file specified
+  Unable to determine R home.
+  Unable to determine R home: [WinError 2] The system cannot find the file specified
+  Unable to determine R home.
+  Error: rpy2 in API mode cannot be built without R in the PATH or R_HOME defined. Correct this or force ABI mode-only by defining the environment variable RPY2_CFFI_MODE=ABI
+  [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+Encountered error while generating package metadata.
+
+See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+WARNING: Ignoring invalid distribution -est-asyncio (c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># activate R magic</span>
+<span class="o">%</span><span class="k">reload_ext</span> rpy2.ipython
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="ne">C</span>:\Users\ARIEFR~1\AppData\Local\Temp/ipykernel_23328/2067332820.py in &lt;module&gt;
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># activate R magic</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;reload_ext&#39;</span><span class="p">,</span> <span class="s1">&#39;rpy2.ipython&#39;</span><span class="p">)</span>
+
+<span class="nn">c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages\IPython\core\interactiveshell.py</span> in <span class="ni">run_line_magic</span><span class="nt">(self, magic_name, line, _stack_depth)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2349</span>                 <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;local_ns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_scope</span><span class="p">(</span><span class="n">stack_depth</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2350</span>             <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2351</span>                 <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2352</span>             <span class="k">return</span> <span class="n">result</span>
+<span class="g g-Whitespace">   </span><span class="mi">2353</span> 
+
+<span class="nn">c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages\decorator.py</span> in <span class="ni">fun</span><span class="nt">(*args, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">230</span>             <span class="k">if</span> <span class="ow">not</span> <span class="n">kwsyntax</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">231</span>                 <span class="n">args</span><span class="p">,</span> <span class="n">kw</span> <span class="o">=</span> <span class="n">fix</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">kw</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">232</span>             <span class="k">return</span> <span class="n">caller</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">extras</span> <span class="o">+</span> <span class="n">args</span><span class="p">),</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">233</span>     <span class="n">fun</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="vm">__name__</span>
+<span class="g g-Whitespace">    </span><span class="mi">234</span>     <span class="n">fun</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="vm">__doc__</span>
+
+<span class="nn">c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages\IPython\core\magic.py</span> in <span class="ni">&lt;lambda&gt;</span><span class="nt">(f, *a, **k)</span>
+<span class="g g-Whitespace">    </span><span class="mi">185</span>     <span class="c1"># but it&#39;s overkill for just that one bit of state.</span>
+<span class="g g-Whitespace">    </span><span class="mi">186</span>     <span class="k">def</span> <span class="nf">magic_deco</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">187</span>         <span class="n">call</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">f</span><span class="p">,</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">k</span><span class="p">:</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">k</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">188</span> 
+<span class="g g-Whitespace">    </span><span class="mi">189</span>         <span class="k">if</span> <span class="n">callable</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
+
+<span class="nn">c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages\IPython\core\magics\extension.py</span> in <span class="ni">reload_ext</span><span class="nt">(self, module_str)</span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span>         <span class="k">if</span> <span class="ow">not</span> <span class="n">module_str</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span>             <span class="k">raise</span> <span class="n">UsageError</span><span class="p">(</span><span class="s1">&#39;Missing module name.&#39;</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">63</span>         <span class="bp">self</span><span class="o">.</span><span class="n">shell</span><span class="o">.</span><span class="n">extension_manager</span><span class="o">.</span><span class="n">reload_extension</span><span class="p">(</span><span class="n">module_str</span><span class="p">)</span>
+
+<span class="nn">c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages\IPython\core\extensions.py</span> in <span class="ni">reload_extension</span><span class="nt">(self, module_str)</span>
+<span class="g g-Whitespace">    </span><span class="mi">128</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">loaded</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">module_str</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">129</span>         <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">130</span>             <span class="bp">self</span><span class="o">.</span><span class="n">load_extension</span><span class="p">(</span><span class="n">module_str</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">131</span> 
+<span class="g g-Whitespace">    </span><span class="mi">132</span>     <span class="k">def</span> <span class="nf">_call_load_ipython_extension</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mod</span><span class="p">):</span>
+
+<span class="nn">c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\site-packages\IPython\core\extensions.py</span> in <span class="ni">load_extension</span><span class="nt">(self, module_str)</span>
+<span class="g g-Whitespace">     </span><span class="mi">78</span>             <span class="k">if</span> <span class="n">module_str</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">79</span>                 <span class="k">with</span> <span class="n">prepended_to_syspath</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ipython_extension_dir</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">80</span>                     <span class="n">mod</span> <span class="o">=</span> <span class="n">import_module</span><span class="p">(</span><span class="n">module_str</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">81</span>                     <span class="k">if</span> <span class="n">mod</span><span class="o">.</span><span class="vm">__file__</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ipython_extension_dir</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">82</span>                         <span class="nb">print</span><span class="p">((</span><span class="s2">&quot;Loading extensions from </span><span class="si">{dir}</span><span class="s2"> is deprecated. &quot;</span>
+
+<span class="nn">c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\importlib\__init__.py</span> in <span class="ni">import_module</span><span class="nt">(name, package)</span>
+<span class="g g-Whitespace">    </span><span class="mi">125</span>                 <span class="k">break</span>
+<span class="g g-Whitespace">    </span><span class="mi">126</span>             <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="ne">--&gt; </span><span class="mi">127</span>     <span class="k">return</span> <span class="n">_bootstrap</span><span class="o">.</span><span class="n">_gcd_import</span><span class="p">(</span><span class="n">name</span><span class="p">[</span><span class="n">level</span><span class="p">:],</span> <span class="n">package</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">128</span> 
+<span class="g g-Whitespace">    </span><span class="mi">129</span> 
+
+<span class="nn">c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\importlib\_bootstrap.py</span> in <span class="ni">_gcd_import</span><span class="nt">(name, package, level)</span>
+
+<span class="nn">c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\importlib\_bootstrap.py</span> in <span class="ni">_find_and_load</span><span class="nt">(name, import_)</span>
+
+<span class="nn">c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\importlib\_bootstrap.py</span> in <span class="ni">_find_and_load_unlocked</span><span class="nt">(name, import_)</span>
+
+<span class="nn">c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\importlib\_bootstrap.py</span> in <span class="ni">_call_with_frames_removed</span><span class="nt">(f, *args, **kwds)</span>
+
+<span class="nn">c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\importlib\_bootstrap.py</span> in <span class="ni">_gcd_import</span><span class="nt">(name, package, level)</span>
+
+<span class="nn">c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\importlib\_bootstrap.py</span> in <span class="ni">_find_and_load</span><span class="nt">(name, import_)</span>
+
+<span class="nn">c:\users\arief ralistiya\appdata\local\programs\python\python39\lib\importlib\_bootstrap.py</span> in <span class="ni">_find_and_load_unlocked</span><span class="nt">(name, import_)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;rpy2&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+library(rvest)
+library(dplyr)
+library(stringr)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:rpy2.rinterface_lib.callbacks:R[write to console]: 
+Attaching package: ‘dplyr’
+
+
+WARNING:rpy2.rinterface_lib.callbacks:R[write to console]: The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+
+WARNING:rpy2.rinterface_lib.callbacks:R[write to console]: The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menyiapkan-link">
+<h3>Menyiapkan Link<a class="headerlink" href="#menyiapkan-link" title="Permalink to this headline">#</a></h3>
+<p>Masukkan Link kedalam variabel url</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+url = &#39;https://finance.detik.com/energi/d-6381298/makin-murah-ini-daftar-bbm-di-indonesia-yang-turun-harga-1-november-2022&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="mengambil-judul">
+<h3>Mengambil Judul<a class="headerlink" href="#mengambil-judul" title="Permalink to this headline">#</a></h3>
+<p>Elemen pertama yang akan di crawl adalah judul atau headline berita. Dengan mudah, bisa mendapatkan css object-nya adalah menggunakan .detail__title.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+url %&gt;% 
+  read_html() %&gt;% 
+  html_nodes(.,&quot;.detail__title&quot;) %&gt;% 
+  html_text()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;\r\n        Ini Daftar BBM di Indonesia yang Turun Harga 1 November 2022    &quot;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="mengambil-tanggal-berita">
+<h3>Mengambil Tanggal Berita<a class="headerlink" href="#mengambil-tanggal-berita" title="Permalink to this headline">#</a></h3>
+<p>Elemen kedua yang akan di crawl adalah judul atau headline berita. Dengan mudah, bisa mendapatkan css object-nya adalah menggunakan .detail__date.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+url %&gt;% 
+  read_html() %&gt;% 
+  html_nodes(.,&quot;.detail__date&quot;) %&gt;% 
+  html_text()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;Selasa, 01 Nov 2022 12:40 WIB&quot;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="mengambil-isi-berita">
+<h3>Mengambil Isi Berita<a class="headerlink" href="#mengambil-isi-berita" title="Permalink to this headline">#</a></h3>
+<p>Elemen terakhir yang hendak diambil adalah isi berita. css object-nya adalah p.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+url %&gt;% 
+  read_html() %&gt;% 
+  html_nodes(.,&quot;p&quot;) %&gt;% 
+  html_text() %&gt;% 
+  str_squish() %&gt;% 
+  paste(collapse = &quot; &quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] &quot;ADVERTISEMENT Pertamina dan Shell Indonesia melakukan penyesuaian harga bahan bakar minyak (BBM) per 1 November 2022 ini. Dengan demikian, harga sejumlah produk BBM Pertamina dan Shell ada yang mengalami penurunan harga. Adapun jenis BBM yang mengalami penurunan harga yakni Shell Super, Shell V-Power, dan Shell V-Power Nitro+. Diketahui bahwa harga Shell Super turun jadi Rp 13.550/liter dari sebelumnya Rp 14.150/liter. Selain Shell Super, Shell V-Power juga turun jadi Rp 14.210/liter dari yang sebelumnya dibanderol Rp 14.840/liter. Sedangkan untuk Shell Power Nitro + juga turun jadi Rp 14.560/liter dari sebelumnya Rp 15.230. ADVERTISEMENT SCROLL TO RESUME CONTENT Di sisi lain, untuk perubahan harga yang juga terjadi untuk sejumlah produk BBM milik Pertamina berlaku untuk BBM Pertamina jenis Pertamax Turbo, Pertamina Dex, dan Dexlite. Namun diketahui bahwa hanya BBM Pertamina jenis Pertamax Turbo yang mengalami sedikit penurunan harga. Perubahan harga terjadi dari awalnya Rp 14.950 per liter (Pulau Jawa) jadi Rp 14.300 per liter. Berbanding Pertamax Turbo, harga Pertamina Dex dan Dexlite justru mengalami kenaikan. Sementara itu untuk harga Pertamax, Pertalite, dan Biosolar diketahui masih sama seperti bulan sebelumnya. Secara rinci, berikut daftar BBM di Indonesia yang turun harga: - Pertamax Turbo: dari Rp 14.950 jadi Rp 14.300 - Shell Super: dari Rp 14.150 jadi Rp 13.550- Shell V-Power: dari Rp 14.840 jadi Rp 14.210- Shell V-power Nitro+: dari Rp 15.230 jadi Rp 14.560 Sebagai informasi, selain mengalami penurunan harga, sejumlah produk BBM milik Pertamina dan Shell juga ada yang menjadi lebih mahal. Sebut saja untuk BBM Shell yang naik adalah V-Power Diesel yang kini dijual Rp 18.840/liter dari sebelumnya Rp 18.450/liter. Sedangkan untuk harga BBM Pertamina yang naik adalah Pertamina Dex yang sebelumnya Rp 18.100 per liter, kini jadi Rp 18.550 per liter. Selanjutnya Dexlite naik harganya dari Rp 17.800 pada bulan Oktober, menjadi Rp 18.000 per liter sejak masuk November.  Simak juga Video: 4 Rekomendasi Cak Imin untuk Jokowi, Dari Subsidi BBM hingga Listrik  [Gambas:Video 20detik]  ADVERTISEMENT ADVERTISEMENT ADVERTISEMENT ADVERTISEMENT&quot;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menggabungkan-function">
+<h3>Menggabungkan Function<a class="headerlink" href="#menggabungkan-function" title="Permalink to this headline">#</a></h3>
+<p>Dari ketiga function diatas, digabung menjadi satu function gabungan. Tujuannya adalah untuk pada saat pembacaan read_html() dilakukan sekali saja supaya lebih efisien.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+scrape_detik = function(url){
+  data = 
+    url %&gt;% 
+    read_html() %&gt;% 
+    {tibble(
+        headline = html_nodes(.,&quot;.detail__title&quot;) %&gt;% 
+                   html_text() %&gt;% 
+                   str_squish(),
+        tanggal = html_nodes(.,&quot;.detail__date&quot;) %&gt;% 
+                  html_text(),
+        teks = html_nodes(.,&quot;p&quot;) %&gt;% 
+               html_text() %&gt;% 
+               str_squish() %&gt;% 
+               paste(collapse = &quot; &quot;)
+  )}
+  return(data)
+}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="memastikan-direktori">
+<h3>Memastikan Direktori<a class="headerlink" href="#memastikan-direktori" title="Permalink to this headline">#</a></h3>
+<p>Memastikan bekerja pada direktori yang diinginkan</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the current working directory</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/content&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">&#39;Berita&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># change working directories</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;/content/Berita&#39;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/content/Berita&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="import-csv">
+<h3>Import CSV<a class="headerlink" href="#import-csv" title="Permalink to this headline">#</a></h3>
+<p>Mengimport csv agar bisa menuliskan hasilnya kedalam csv</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;result_berita_BBM.csv&quot;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="memanggil-function">
+<h3>Memanggil Function<a class="headerlink" href="#memanggil-function" title="Permalink to this headline">#</a></h3>
+<p>Memanggil Function</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+#Memanggil Function
+scrape_detik(url)
+#hasil = scrape_detik(url)
+#write.csv(hasil_crawl, &quot;/content/Berita&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 1 × 3
+  headline                                                     tanggal     teks 
+  &lt;chr&gt;                                                        &lt;chr&gt;       &lt;chr&gt;
+1 Ini Daftar BBM di Indonesia yang Turun Harga 1 November 2022 Selasa, 01… ADVE…
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menyimpan-data">
+<h3>Menyimpan Data<a class="headerlink" href="#menyimpan-data" title="Permalink to this headline">#</a></h3>
+<p>Menyimpan data hasil crawling kedalam bentuk csv yang sudah dibuat, lalu data frame data dan memanggil function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+df &lt;- data.frame(scrape_detik(url))
+print(df)
+
+write.csv(df, &quot;/content/Berita/result_berita_BBM.csv&quot;, row.names=FALSE)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                      headline
+1 Ini Daftar BBM di Indonesia yang Turun Harga 1 November 2022
+                        tanggal
+1 Selasa, 01 Nov 2022 12:40 WIB
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             teks
+1 ADVERTISEMENT Pertamina dan Shell Indonesia melakukan penyesuaian harga bahan bakar minyak (BBM) per 1 November 2022 ini. Dengan demikian, harga sejumlah produk BBM Pertamina dan Shell ada yang mengalami penurunan harga. Adapun jenis BBM yang mengalami penurunan harga yakni Shell Super, Shell V-Power, dan Shell V-Power Nitro+. Diketahui bahwa harga Shell Super turun jadi Rp 13.550/liter dari sebelumnya Rp 14.150/liter. Selain Shell Super, Shell V-Power juga turun jadi Rp 14.210/liter dari yang sebelumnya dibanderol Rp 14.840/liter. Sedangkan untuk Shell Power Nitro + juga turun jadi Rp 14.560/liter dari sebelumnya Rp 15.230. ADVERTISEMENT SCROLL TO RESUME CONTENT Di sisi lain, untuk perubahan harga yang juga terjadi untuk sejumlah produk BBM milik Pertamina berlaku untuk BBM Pertamina jenis Pertamax Turbo, Pertamina Dex, dan Dexlite. Namun diketahui bahwa hanya BBM Pertamina jenis Pertamax Turbo yang mengalami sedikit penurunan harga. Perubahan harga terjadi dari awalnya Rp 14.950 per liter (Pulau Jawa) jadi Rp 14.300 per liter. Berbanding Pertamax Turbo, harga Pertamina Dex dan Dexlite justru mengalami kenaikan. Sementara itu untuk harga Pertamax, Pertalite, dan Biosolar diketahui masih sama seperti bulan sebelumnya. Secara rinci, berikut daftar BBM di Indonesia yang turun harga: - Pertamax Turbo: dari Rp 14.950 jadi Rp 14.300 - Shell Super: dari Rp 14.150 jadi Rp 13.550- Shell V-Power: dari Rp 14.840 jadi Rp 14.210- Shell V-power Nitro+: dari Rp 15.230 jadi Rp 14.560 Sebagai informasi, selain mengalami penurunan harga, sejumlah produk BBM milik Pertamina dan Shell juga ada yang menjadi lebih mahal. Sebut saja untuk BBM Shell yang naik adalah V-Power Diesel yang kini dijual Rp 18.840/liter dari sebelumnya Rp 18.450/liter. Sedangkan untuk harga BBM Pertamina yang naik adalah Pertamina Dex yang sebelumnya Rp 18.100 per liter, kini jadi Rp 18.550 per liter. Selanjutnya Dexlite naik harganya dari Rp 17.800 pada bulan Oktober, menjadi Rp 18.000 per liter sejak masuk November.  Simak juga Video: 4 Rekomendasi Cak Imin untuk Jokowi, Dari Subsidi BBM hingga Listrik  [Gambas:Video 20detik]  ADVERTISEMENT ADVERTISEMENT ADVERTISEMENT ADVERTISEMENT
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="melihat-data">
+<h3>Melihat Data<a class="headerlink" href="#melihat-data" title="Permalink to this headline">#</a></h3>
+<p>Melihat Data yang sudah disimpan dalam file .csv dengan nama result.csv</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+data &lt;- read.csv(&quot;result_berita_BBM.csv&quot;)
+print(data)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                      headline
+1 Ini Daftar BBM di Indonesia yang Turun Harga 1 November 2022
+                        tanggal
+1 Selasa, 01 Nov 2022 12:40 WIB
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             teks
+1 ADVERTISEMENT Pertamina dan Shell Indonesia melakukan penyesuaian harga bahan bakar minyak (BBM) per 1 November 2022 ini. Dengan demikian, harga sejumlah produk BBM Pertamina dan Shell ada yang mengalami penurunan harga. Adapun jenis BBM yang mengalami penurunan harga yakni Shell Super, Shell V-Power, dan Shell V-Power Nitro+. Diketahui bahwa harga Shell Super turun jadi Rp 13.550/liter dari sebelumnya Rp 14.150/liter. Selain Shell Super, Shell V-Power juga turun jadi Rp 14.210/liter dari yang sebelumnya dibanderol Rp 14.840/liter. Sedangkan untuk Shell Power Nitro + juga turun jadi Rp 14.560/liter dari sebelumnya Rp 15.230. ADVERTISEMENT SCROLL TO RESUME CONTENT Di sisi lain, untuk perubahan harga yang juga terjadi untuk sejumlah produk BBM milik Pertamina berlaku untuk BBM Pertamina jenis Pertamax Turbo, Pertamina Dex, dan Dexlite. Namun diketahui bahwa hanya BBM Pertamina jenis Pertamax Turbo yang mengalami sedikit penurunan harga. Perubahan harga terjadi dari awalnya Rp 14.950 per liter (Pulau Jawa) jadi Rp 14.300 per liter. Berbanding Pertamax Turbo, harga Pertamina Dex dan Dexlite justru mengalami kenaikan. Sementara itu untuk harga Pertamax, Pertalite, dan Biosolar diketahui masih sama seperti bulan sebelumnya. Secara rinci, berikut daftar BBM di Indonesia yang turun harga: - Pertamax Turbo: dari Rp 14.950 jadi Rp 14.300 - Shell Super: dari Rp 14.150 jadi Rp 13.550- Shell V-Power: dari Rp 14.840 jadi Rp 14.210- Shell V-power Nitro+: dari Rp 15.230 jadi Rp 14.560 Sebagai informasi, selain mengalami penurunan harga, sejumlah produk BBM milik Pertamina dan Shell juga ada yang menjadi lebih mahal. Sebut saja untuk BBM Shell yang naik adalah V-Power Diesel yang kini dijual Rp 18.840/liter dari sebelumnya Rp 18.450/liter. Sedangkan untuk harga BBM Pertamina yang naik adalah Pertamina Dex yang sebelumnya Rp 18.100 per liter, kini jadi Rp 18.550 per liter. Selanjutnya Dexlite naik harganya dari Rp 17.800 pada bulan Oktober, menjadi Rp 18.000 per liter sejak masuk November.  Simak juga Video: 4 Rekomendasi Cak Imin untuk Jokowi, Dari Subsidi BBM hingga Listrik  [Gambas:Video 20detik]  ADVERTISEMENT ADVERTISEMENT ADVERTISEMENT ADVERTISEMENT
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="load-dataset">
+<h3>Load Dataset<a class="headerlink" href="#load-dataset" title="Permalink to this headline">#</a></h3>
+<p>Load dataset untuk melakukan proses selanjutnya.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Load Dataset</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;result_berita_BBM.csv&#39;</span><span class="p">)</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-bc0f1b8f-1993-448e-808f-a764ba724554">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>headline</th>
+      <th>tanggal</th>
+      <th>teks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Ini Daftar BBM di Indonesia yang Turun Harga 1...</td>
+      <td>Selasa, 01 Nov 2022 12:40 WIB</td>
+      <td>ADVERTISEMENT Pertamina dan Shell Indonesia me...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-bc0f1b8f-1993-448e-808f-a764ba724554')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-bc0f1b8f-1993-448e-808f-a764ba724554 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-bc0f1b8f-1993-448e-808f-a764ba724554');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+<section id="membuang-data">
+<h3>Membuang Data<a class="headerlink" href="#membuang-data" title="Permalink to this headline">#</a></h3>
+<p>untuk melakukan tahap selanjutnya, yang diperlukan hanya isi beritanya saja, maka kolom headline dan tanggal akan di drop. Dan menyimpan hasil data yang baru kedalam csv dengan nama Berita.csv</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">buang</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;headline&#39;</span><span class="p">,</span> <span class="s1">&#39;tanggal&#39;</span><span class="p">]</span>
+<span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">buang</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;Berita.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="mengubah-file-csv-dalam-bentuk-pdf">
+<h2>Mengubah File CSV dalam Bentuk PDF<a class="headerlink" href="#mengubah-file-csv-dalam-bentuk-pdf" title="Permalink to this headline">#</a></h2>
+<p>Setelah mendapatkan data, maka hasil csv tadi diubah menjadi pdf dan disimpan. Tahapan yang dilakukan ialah sebagai Berikut:</p>
+<section id="convert-csv-kedalam-bentuk-html">
+<h3>Convert CSV kedalam Bentuk HTML<a class="headerlink" href="#convert-csv-kedalam-bentuk-html" title="Permalink to this headline">#</a></h3>
+<p>yang pertama ialah mengconvert file csv tadi kedalam bentuk HTML menggunakan modul pandas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">csv</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Berita.csv&#39;</span><span class="p">)</span>
+<span class="n">string</span><span class="o">=</span><span class="n">csv</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="s1">&#39;Summary.html&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="convert-html-menjadi-pdf-menggunakan-pdfkit">
+<h3>Convert HTML Menjadi PDF Menggunakan pdfkit<a class="headerlink" href="#convert-html-menjadi-pdf-menggunakan-pdfkit" title="Permalink to this headline">#</a></h3>
+<p>Selanjutnya ialah mengubah file yang HTML menjadi PDF</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install pdfkit
+<span class="o">!</span>wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.bionic_amd64.deb
+<span class="o">!</span>cp wkhtmltox_0.12.6-1.bionic_amd64.deb /usr/bin
+<span class="o">!</span>sudo apt install /usr/bin/wkhtmltox_0.12.6-1.bionic_amd64.deb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting pdfkit
+  Downloading pdfkit-1.0.0-py3-none-any.whl (12 kB)
+Installing collected packages: pdfkit
+Successfully installed pdfkit-1.0.0
+--2022-11-04 14:23:24--  https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.bionic_amd64.deb
+Resolving github.com (github.com)... 140.82.121.3
+Connecting to github.com (github.com)|140.82.121.3|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/131323182/b6d71780-ab7e-11ea-9b13-e2875e48ec6c?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20221104%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20221104T142324Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=fbc195da41dab52137c5dd3f3fec8b34ae0b5120c08e81d99d3beeaf7e4b8602&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=131323182&amp;response-content-disposition=attachment%3B%20filename%3Dwkhtmltox_0.12.6-1.bionic_amd64.deb&amp;response-content-type=application%2Foctet-stream [following]
+--2022-11-04 14:23:24--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/131323182/b6d71780-ab7e-11ea-9b13-e2875e48ec6c?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20221104%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20221104T142324Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=fbc195da41dab52137c5dd3f3fec8b34ae0b5120c08e81d99d3beeaf7e4b8602&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=131323182&amp;response-content-disposition=attachment%3B%20filename%3Dwkhtmltox_0.12.6-1.bionic_amd64.deb&amp;response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 15729530 (15M) [application/octet-stream]
+Saving to: ‘wkhtmltox_0.12.6-1.bionic_amd64.deb’
+
+wkhtmltox_0.12.6-1. 100%[===================&gt;]  15.00M  --.-KB/s    in 0.07s   
+
+2022-11-04 14:23:24 (208 MB/s) - ‘wkhtmltox_0.12.6-1.bionic_amd64.deb’ saved [15729530/15729530]
+
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Note, selecting &#39;wkhtmltox&#39; instead of &#39;/usr/bin/wkhtmltox_0.12.6-1.bionic_amd64.deb&#39;
+The following package was automatically installed and is no longer required:
+  libnvidia-common-460
+Use &#39;sudo apt autoremove&#39; to remove it.
+The following additional packages will be installed:
+  xfonts-75dpi xfonts-base xfonts-encodings xfonts-utils
+Suggested packages:
+  xfs | xserver
+The following NEW packages will be installed:
+  wkhtmltox xfonts-75dpi xfonts-base xfonts-encodings xfonts-utils
+0 upgraded, 5 newly installed, 0 to remove and 4 not upgraded.
+Need to get 9,947 kB/25.7 MB of archives.
+After this operation, 152 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu bionic/main amd64 xfonts-encodings all 1:1.0.4-2 [573 kB]
+Get:2 /usr/bin/wkhtmltox_0.12.6-1.bionic_amd64.deb wkhtmltox amd64 1:0.12.6-1.bionic [15.7 MB]
+Get:3 http://archive.ubuntu.com/ubuntu bionic/main amd64 xfonts-utils amd64 1:7.7+6 [91.5 kB]
+Get:4 http://archive.ubuntu.com/ubuntu bionic/universe amd64 xfonts-75dpi all 1:1.0.4+nmu1 [3,368 kB]
+Get:5 http://archive.ubuntu.com/ubuntu bionic/main amd64 xfonts-base all 1:1.0.4+nmu1 [5,914 kB]
+Fetched 9,947 kB in 1s (8,492 kB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76, &lt;&gt; line 5.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Selecting previously unselected package xfonts-encodings.
+(Reading database ... 123941 files and directories currently installed.)
+Preparing to unpack .../xfonts-encodings_1%3a1.0.4-2_all.deb ...
+Unpacking xfonts-encodings (1:1.0.4-2) ...
+Selecting previously unselected package xfonts-utils.
+Preparing to unpack .../xfonts-utils_1%3a7.7+6_amd64.deb ...
+Unpacking xfonts-utils (1:7.7+6) ...
+Selecting previously unselected package xfonts-75dpi.
+Preparing to unpack .../xfonts-75dpi_1%3a1.0.4+nmu1_all.deb ...
+Unpacking xfonts-75dpi (1:1.0.4+nmu1) ...
+Selecting previously unselected package xfonts-base.
+Preparing to unpack .../xfonts-base_1%3a1.0.4+nmu1_all.deb ...
+Unpacking xfonts-base (1:1.0.4+nmu1) ...
+Selecting previously unselected package wkhtmltox.
+Preparing to unpack .../wkhtmltox_0.12.6-1.bionic_amd64.deb ...
+Unpacking wkhtmltox (1:0.12.6-1.bionic) ...
+Setting up xfonts-encodings (1:1.0.4-2) ...
+Setting up xfonts-utils (1:7.7+6) ...
+Setting up xfonts-75dpi (1:1.0.4+nmu1) ...
+Setting up xfonts-base (1:1.0.4+nmu1) ...
+Setting up wkhtmltox (1:0.12.6-1.bionic) ...
+Processing triggers for fontconfig (2.12.6-0ubuntu2) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Processing triggers for libc-bin (2.27-3ubuntu1.6) ...
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pdfkit</span>
+<span class="n">pdfkit</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s1">&#39;Summary.html&#39;</span><span class="p">,</span> <span class="s1">&#39;hasil_summary.pdf&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="membaca-dokumen">
+<h2>Membaca Dokumen<a class="headerlink" href="#membaca-dokumen" title="Permalink to this headline">#</a></h2>
+<p>Mambaca dokumen ini menggunakan 2 library, yaitu PyPDF2 dan docx2txt. Berikut Pengimplementasiannya:</p>
+<section id="install-library">
+<h3>Install Library<a class="headerlink" href="#install-library" title="Permalink to this headline">#</a></h3>
+<p>Menginstal Library yang dibutuhkan</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install PyPDF2
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting PyPDF2
+  Downloading PyPDF2-2.11.1-py3-none-any.whl (220 kB)
+     |████████████████████████████████| 220 kB 13.4 MB/s 
+?25hRequirement already satisfied: typing-extensions&gt;=3.10.0.0 in /usr/local/lib/python3.7/dist-packages (from PyPDF2) (4.1.1)
+Installing collected packages: PyPDF2
+Successfully installed PyPDF2-2.11.1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install docx2txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting docx2txt
+  Downloading docx2txt-0.8.tar.gz (2.8 kB)
+Building wheels for collected packages: docx2txt
+  Building wheel for docx2txt (setup.py) ... ?25l?25hdone
+  Created wheel for docx2txt: filename=docx2txt-0.8-py3-none-any.whl size=3980 sha256=c4a98e7d1e96dc1ff902c90ea1e4b1e5b05e250717066d57da9ae15a448f3d96
+  Stored in directory: /root/.cache/pip/wheels/b7/20/b2/473e3aea9a0c0d3e7b2f7bd81d06d0794fec12752733d1f3a8
+Successfully built docx2txt
+Installing collected packages: docx2txt
+Successfully installed docx2txt-0.8
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install opencv-python
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: opencv-python in /usr/local/lib/python3.7/dist-packages (4.6.0.66)
+Requirement already satisfied: numpy&gt;=1.14.5 in /usr/local/lib/python3.7/dist-packages (from opencv-python) (1.21.6)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="import-library">
+<h3>Import Library<a class="headerlink" href="#import-library" title="Permalink to this headline">#</a></h3>
+<p>Import library yang sudah diinstall</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">PyPDF2</span>
+<span class="kn">import</span> <span class="nn">docx2txt</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menginputkan-file-dokumen">
+<h3>Menginputkan File Dokumen<a class="headerlink" href="#menginputkan-file-dokumen" title="Permalink to this headline">#</a></h3>
+<p>input nama file dokumen yang akan dibaca.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nama</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;hasil_summary.pdf&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="membuka-file-dokumen">
+<h3>Membuka File Dokumen<a class="headerlink" href="#membuka-file-dokumen" title="Permalink to this headline">#</a></h3>
+<p>Buka File Dokumen</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pdfFile</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="n">nama</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pdfReader</span> <span class="o">=</span> <span class="n">PyPDF2</span><span class="o">.</span><span class="n">PdfFileReader</span><span class="p">(</span><span class="n">pdfFile</span><span class="p">)</span>
+<span class="n">pageObj</span> <span class="o">=</span> <span class="n">pdfReader</span><span class="o">.</span><span class="n">getPage</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">document</span> <span class="o">=</span> <span class="n">pageObj</span><span class="o">.</span><span class="n">extractText</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">document</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Unnamed:\n0\nteks\n0\n0\nADVERTISEMENT Pertamina dan Shell Indonesia melakukan penyesuaian harga bahan bakar minyak\n(BBM) per 1 November 2022 ini. Dengan demikian, harga sejumlah produk BBM Pertamina dan Shell ada\nyang mengalami penurunan harga. Adapun jenis BBM yang mengalami penurunan harga yakni Shell Super,\nShell V-Power, dan Shell V-Power Nitro+. Diketahui bahwa harga Shell Super turun jadi Rp 13.550/liter dari\nsebelumnya Rp 14.150/liter. Selain Shell Super, Shell V-Power juga turun jadi Rp 14.210/liter dari yang\nsebelumnya dibanderol Rp 14.840/liter. Sedangkan untuk Shell Power Nitro + juga turun jadi Rp 14.560/liter\ndari sebelumnya Rp 15.230. ADVERTISEMENT SCROLL TO RESUME CONTENT Di sisi lain, untuk\nperubahan harga yang juga terjadi untuk sejumlah produk BBM milik Pertamina berlaku untuk BBM\nPertamina jenis Pertamax Turbo, Pertamina Dex, dan Dexlite. Namun diketahui bahwa hanya BBM\nPertamina jenis Pertamax Turbo yang mengalami sedikit penurunan harga. Perubahan harga terjadi dari\nawalnya Rp 14.950 per liter (Pulau Jawa) jadi Rp 14.300 per liter. Berbanding Pertamax Turbo, harga\nPertamina Dex dan Dexlite justru mengalami kenaikan. Sementara itu untuk harga Pertamax, Pertalite, dan\nBiosolar diketahui masih sama seperti bulan sebelumnya. Secara rinci, berikut daftar BBM di Indonesia yang\nturun harga: - Pertamax Turbo: dari Rp 14.950 jadi Rp 14.300 - Shell Super: dari Rp 14.150 jadi Rp 13.550-\nShell V-Power: dari Rp 14.840 jadi Rp 14.210- Shell V-power Nitro+: dari Rp 15.230 jadi Rp 14.560 Sebagai\ninformasi, selain mengalami penurunan harga, sejumlah produk BBM milik Pertamina dan Shell juga ada\nyang menjadi lebih mahal. Sebut saja untuk BBM Shell yang naik adalah V-Power Diesel yang kini dijual Rp\n18.840/liter dari sebelumnya Rp 18.450/liter. Sedangkan untuk harga BBM Pertamina yang naik adalah\nPertamina Dex yang sebelumnya Rp 18.100 per liter, kini jadi Rp 18.550 per liter. Selanjutnya Dexlite naik\nharganya dari Rp 17.800 pada bulan Oktober, menjadi Rp 18.000 per liter sejak masuk November. \nSimak\njuga Video: 4 Rekomendasi Cak Imin untuk Jokowi, Dari Subsidi BBM hingga Listrik \n[Gambas:Video 20detik]\nADVERTISEMENT ADVERTISEMENT ADVERTISEMENT ADVERTISEMENT&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="tokenisasi">
+<h2>Tokenisasi<a class="headerlink" href="#tokenisasi" title="Permalink to this headline">#</a></h2>
+<p>Dalam tahap tokenisasi, menggunakan PunktSentenceTokenizer dalam pengimplementasiannya.</p>
+<section id="memecah-menjadi-beberapa-kalimat">
+<h3>Memecah Menjadi Beberapa Kalimat<a class="headerlink" href="#memecah-menjadi-beberapa-kalimat" title="Permalink to this headline">#</a></h3>
+<p>Memecah data menjadi beberapa kalimat</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.tokenize.punkt</span> <span class="kn">import</span> <span class="n">PunktSentenceTokenizer</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tokenize</span><span class="p">(</span><span class="n">document</span><span class="p">):</span>
+    <span class="c1"># Kita memecahnya menggunakan  PunktSentenceTokenizer</span>
+    <span class="c1"># </span>
+    <span class="n">doc_tokenizer</span> <span class="o">=</span> <span class="n">PunktSentenceTokenizer</span><span class="p">()</span>
+    
+    <span class="c1"># metode tokenize() memanggil dokument kita</span>
+    <span class="c1"># sebagai input dan menghasilkan daftar kalimat dalam dokumen</span>
+    
+    <span class="c1"># sentences_list adalah daftar masing masing kalimat dari dokumen yang ada.</span>
+    <span class="n">sentences_list</span> <span class="o">=</span> <span class="n">doc_tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sentences_list</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentences_list</span> <span class="o">=</span> <span class="n">tokenize</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">sentences_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----------------&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>----------------
+Unnamed:
+0
+teks
+0
+0
+ADVERTISEMENT Pertamina dan Shell Indonesia melakukan penyesuaian harga bahan bakar minyak
+(BBM) per 1 November 2022 ini.
+----------------
+Dengan demikian, harga sejumlah produk BBM Pertamina dan Shell ada
+yang mengalami penurunan harga.
+----------------
+Adapun jenis BBM yang mengalami penurunan harga yakni Shell Super,
+Shell V-Power, dan Shell V-Power Nitro+.
+----------------
+Diketahui bahwa harga Shell Super turun jadi Rp 13.550/liter dari
+sebelumnya Rp 14.150/liter.
+----------------
+Selain Shell Super, Shell V-Power juga turun jadi Rp 14.210/liter dari yang
+sebelumnya dibanderol Rp 14.840/liter.
+----------------
+Sedangkan untuk Shell Power Nitro + juga turun jadi Rp 14.560/liter
+dari sebelumnya Rp 15.230.
+----------------
+ADVERTISEMENT SCROLL TO RESUME CONTENT Di sisi lain, untuk
+perubahan harga yang juga terjadi untuk sejumlah produk BBM milik Pertamina berlaku untuk BBM
+Pertamina jenis Pertamax Turbo, Pertamina Dex, dan Dexlite.
+----------------
+Namun diketahui bahwa hanya BBM
+Pertamina jenis Pertamax Turbo yang mengalami sedikit penurunan harga.
+----------------
+Perubahan harga terjadi dari
+awalnya Rp 14.950 per liter (Pulau Jawa) jadi Rp 14.300 per liter.
+----------------
+Berbanding Pertamax Turbo, harga
+Pertamina Dex dan Dexlite justru mengalami kenaikan.
+----------------
+Sementara itu untuk harga Pertamax, Pertalite, dan
+Biosolar diketahui masih sama seperti bulan sebelumnya.
+----------------
+Secara rinci, berikut daftar BBM di Indonesia yang
+turun harga: - Pertamax Turbo: dari Rp 14.950 jadi Rp 14.300 - Shell Super: dari Rp 14.150 jadi Rp 13.550-
+Shell V-Power: dari Rp 14.840 jadi Rp 14.210- Shell V-power Nitro+: dari Rp 15.230 jadi Rp 14.560 Sebagai
+informasi, selain mengalami penurunan harga, sejumlah produk BBM milik Pertamina dan Shell juga ada
+yang menjadi lebih mahal.
+----------------
+Sebut saja untuk BBM Shell yang naik adalah V-Power Diesel yang kini dijual Rp
+18.840/liter dari sebelumnya Rp 18.450/liter.
+----------------
+Sedangkan untuk harga BBM Pertamina yang naik adalah
+Pertamina Dex yang sebelumnya Rp 18.100 per liter, kini jadi Rp 18.550 per liter.
+----------------
+Selanjutnya Dexlite naik
+harganya dari Rp 17.800 pada bulan Oktober, menjadi Rp 18.000 per liter sejak masuk November.
+----------------
+Simak
+juga Video: 4 Rekomendasi Cak Imin untuk Jokowi, Dari Subsidi BBM hingga Listrik 
+[Gambas:Video 20detik]
+ADVERTISEMENT ADVERTISEMENT ADVERTISEMENT ADVERTISEMENT
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Banyaknya kalimat = &quot;</span><span class="p">,</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sentences_list</span><span class="p">)),</span><span class="s1">&#39;kalimat&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Banyaknya kalimat =  16 kalimat
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="memecah-kalimat-menjadi-beberapa-kata">
+<h3>Memecah Kalimat Menjadi Beberapa Kata<a class="headerlink" href="#memecah-kalimat-menjadi-beberapa-kata" title="Permalink to this headline">#</a></h3>
+<p>Memecah kalimat menjadi beberapa kosa kata</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfTransformer</span><span class="p">,</span> <span class="n">CountVectorizer</span>
+<span class="n">cv</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
+<span class="n">cv_matrix</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">sentences_list</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Banyaknya kosa kata = &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">((</span><span class="n">cv</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())),</span><span class="s1">&#39;Kosa_Kata&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Banyaknya kosa kata =  127 Kosa_Kata
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;kosa kata = &quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kosa kata =  [&#39;000&#39; &#39;100&#39; &#39;13&#39; &#39;14&#39; &#39;15&#39; &#39;150&#39; &#39;17&#39; &#39;18&#39; &#39;2022&#39; &#39;20detik&#39; &#39;210&#39; &#39;230&#39;
+ &#39;300&#39; &#39;450&#39; &#39;550&#39; &#39;560&#39; &#39;800&#39; &#39;840&#39; &#39;950&#39; &#39;ada&#39; &#39;adalah&#39; &#39;adapun&#39;
+ &#39;advertisement&#39; &#39;awalnya&#39; &#39;bahan&#39; &#39;bahwa&#39; &#39;bakar&#39; &#39;bbm&#39; &#39;berbanding&#39;
+ &#39;berikut&#39; &#39;berlaku&#39; &#39;biosolar&#39; &#39;bulan&#39; &#39;cak&#39; &#39;content&#39; &#39;daftar&#39; &#39;dan&#39;
+ &#39;dari&#39; &#39;demikian&#39; &#39;dengan&#39; &#39;dex&#39; &#39;dexlite&#39; &#39;di&#39; &#39;dibanderol&#39; &#39;diesel&#39;
+ &#39;dijual&#39; &#39;diketahui&#39; &#39;gambas&#39; &#39;hanya&#39; &#39;harga&#39; &#39;harganya&#39; &#39;hingga&#39; &#39;imin&#39;
+ &#39;indonesia&#39; &#39;informasi&#39; &#39;ini&#39; &#39;itu&#39; &#39;jadi&#39; &#39;jawa&#39; &#39;jenis&#39; &#39;jokowi&#39; &#39;juga&#39;
+ &#39;justru&#39; &#39;kenaikan&#39; &#39;kini&#39; &#39;lain&#39; &#39;lebih&#39; &#39;listrik&#39; &#39;liter&#39; &#39;mahal&#39;
+ &#39;masih&#39; &#39;masuk&#39; &#39;melakukan&#39; &#39;mengalami&#39; &#39;menjadi&#39; &#39;milik&#39; &#39;minyak&#39; &#39;naik&#39;
+ &#39;namun&#39; &#39;nitro&#39; &#39;november&#39; &#39;oktober&#39; &#39;pada&#39; &#39;penurunan&#39; &#39;penyesuaian&#39;
+ &#39;per&#39; &#39;pertalite&#39; &#39;pertamax&#39; &#39;pertamina&#39; &#39;perubahan&#39; &#39;power&#39; &#39;produk&#39;
+ &#39;pulau&#39; &#39;rekomendasi&#39; &#39;resume&#39; &#39;rinci&#39; &#39;rp&#39; &#39;saja&#39; &#39;sama&#39; &#39;scroll&#39;
+ &#39;sebagai&#39; &#39;sebelumnya&#39; &#39;sebut&#39; &#39;secara&#39; &#39;sedangkan&#39; &#39;sedikit&#39; &#39;sejak&#39;
+ &#39;sejumlah&#39; &#39;selain&#39; &#39;selanjutnya&#39; &#39;sementara&#39; &#39;seperti&#39; &#39;shell&#39; &#39;simak&#39;
+ &#39;sisi&#39; &#39;subsidi&#39; &#39;super&#39; &#39;teks&#39; &#39;terjadi&#39; &#39;to&#39; &#39;turbo&#39; &#39;turun&#39; &#39;unnamed&#39;
+ &#39;untuk&#39; &#39;video&#39; &#39;yakni&#39; &#39;yang&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="matriks-tf-idf">
+<h2>Matriks TF-IDF<a class="headerlink" href="#matriks-tf-idf" title="Permalink to this headline">#</a></h2>
+<p>Setelah memecah kalimat menjadi beberapa kata, maka hasilnya dibuat matriks TF-IDF dan Hasilnya seperti berikut:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cv_matrix</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  (0, 122)	1
+  (0, 117)	1
+  (0, 22)	1
+  (0, 88)	1
+  (0, 36)	1
+  (0, 112)	1
+  (0, 53)	1
+  (0, 72)	1
+  (0, 84)	1
+  (0, 49)	1
+  (0, 24)	1
+  (0, 26)	1
+  (0, 76)	1
+  (0, 27)	1
+  (0, 85)	1
+  (0, 80)	1
+  (0, 8)	1
+  (0, 55)	1
+  (1, 88)	1
+  (1, 36)	1
+  (1, 112)	1
+  (1, 49)	2
+  (1, 27)	1
+  (1, 39)	1
+  (1, 38)	1
+  :	:
+  (14, 109)	1
+  (14, 50)	1
+  (14, 6)	1
+  (14, 16)	1
+  (14, 82)	1
+  (14, 81)	1
+  (14, 0)	1
+  (14, 106)	1
+  (14, 71)	1
+  (15, 22)	4
+  (15, 27)	1
+  (15, 37)	1
+  (15, 61)	1
+  (15, 123)	1
+  (15, 113)	1
+  (15, 124)	2
+  (15, 93)	1
+  (15, 33)	1
+  (15, 52)	1
+  (15, 60)	1
+  (15, 115)	1
+  (15, 51)	1
+  (15, 67)	1
+  (15, 47)	1
+  (15, 9)	1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">normal_matrix</span> <span class="o">=</span> <span class="n">TfidfTransformer</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">cv_matrix</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">normal_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.         0.         0.         ... 0.         0.         0.        ]
+ [0.         0.         0.         ... 0.         0.         0.19637513]
+ [0.         0.         0.         ... 0.         0.31977636 0.16660494]
+ ...
+ [0.         0.2523378  0.         ... 0.         0.         0.26293828]
+ [0.25592534 0.         0.         ... 0.         0.         0.        ]
+ [0.         0.         0.         ... 0.3999293  0.         0.        ]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="membuat-n-graph-dengan-menggunakan-networkx">
+<h2>Membuat N-Graph dengan Menggunakan networkx<a class="headerlink" href="#membuat-n-graph-dengan-menggunakan-networkx" title="Permalink to this headline">#</a></h2>
+<p>Agar kata bisa di pagerank, maka membuat susunan n-graphnya terlebih dahulu menggunakan modul networkx</p>
+<section id="import-modul">
+<h3>Import Modul<a class="headerlink" href="#import-modul" title="Permalink to this headline">#</a></h3>
+<p>Import Modul yang Dibutuhkan</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">normal_matrix</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">toarray</span><span class="p">)</span>
+<span class="n">res_graph</span> <span class="o">=</span> <span class="n">normal_matrix</span> <span class="o">*</span> <span class="n">normal_matrix</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;bound method _cs_matrix.toarray of &lt;127x16 sparse matrix of type &#39;&lt;class &#39;numpy.float64&#39;&gt;&#39;
+	with 287 stored elements in Compressed Sparse Column format&gt;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="membuat-n-graph">
+<h3>Membuat N-Graph<a class="headerlink" href="#membuat-n-graph" title="Permalink to this headline">#</a></h3>
+<p>Membuat N-Graph dan mempresentasikannya seperti berikut:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nx_graph</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">from_scipy_sparse_matrix</span><span class="p">(</span><span class="n">res_graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nx</span><span class="o">.</span><span class="n">draw_circular</span><span class="p">(</span><span class="n">nx_graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Data_Berita_Pagerank_80_0.png" src="_images/Data_Berita_Pagerank_80_0.png" />
+</div>
+</div>
+</section>
+<section id="banyak-sisi">
+<h3>Banyak Sisi<a class="headerlink" href="#banyak-sisi" title="Permalink to this headline">#</a></h3>
+<p>Melihat banyak sisi</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Banyaknya sisi </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nx_graph</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Banyaknya sisi 128
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="normal-matrix-shape">
+<h3>Normal Matrix Shape<a class="headerlink" href="#normal-matrix-shape" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res_graph</span> <span class="o">=</span> <span class="n">normal_matrix</span> <span class="o">*</span> <span class="n">normal_matrix</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">normal_matrix</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(16, 127)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id2">
+<h2>Pagerank<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>Setelah membentuk n-graph, selanjutnya ialah menghitung pagerank dari beberapa masing-masing kalimat. Berikut hasil pagerank:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ranks</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">pagerank</span><span class="p">(</span><span class="n">nx_graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="ranking-kalimat">
+<h3>Ranking Kalimat<a class="headerlink" href="#ranking-kalimat" title="Permalink to this headline">#</a></h3>
+<p>Berikut Hasil Rank dari Kalimat</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hasil</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">ranks</span><span class="p">:</span>
+    <span class="n">rank</span><span class="o">=</span><span class="n">ranks</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s1">&#39;Kalimat Ke-&#39;</span><span class="p">,</span> <span class="n">i</span>
+    <span class="n">hasil</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rank</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kalimat Ke-&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span> <span class="p">,</span><span class="n">ranks</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kalimat Ke- 0 : 0.049557312789546046
+Kalimat Ke- 1 : 0.06035847803604813
+Kalimat Ke- 2 : 0.062120068759123265
+Kalimat Ke- 3 : 0.07541554373059539
+Kalimat Ke- 4 : 0.07745472508448656
+Kalimat Ke- 5 : 0.07302813243439654
+Kalimat Ke- 6 : 0.06295347165465216
+Kalimat Ke- 7 : 0.05622895301981944
+Kalimat Ke- 8 : 0.06310008839177517
+Kalimat Ke- 9 : 0.050347946566640996
+Kalimat Ke- 10 : 0.044862861825646735
+Kalimat Ke- 11 : 0.08720020568164144
+Kalimat Ke- 12 : 0.0679999125846498
+Kalimat Ke- 13 : 0.07719554336703802
+Kalimat Ke- 14 : 0.05100755005229351
+Kalimat Ke- 15 : 0.041169206021646886
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="mengurutkan-nilai-pagerank-dari-yang-terbesar-ke-yang-terkecil">
+<h3>Mengurutkan Nilai Pagerank dari Yang terbesar Ke yang Terkecil<a class="headerlink" href="#mengurutkan-nilai-pagerank-dari-yang-terbesar-ke-yang-terkecil" title="Permalink to this headline">#</a></h3>
+<p>Mengurutkan nilai pagerank dari yang terbesar ke yang terkecil</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hasil</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">hasil</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(0.08720020568164144, &#39;Kalimat Ke-&#39;, 11),
+ (0.07745472508448656, &#39;Kalimat Ke-&#39;, 4),
+ (0.07719554336703802, &#39;Kalimat Ke-&#39;, 13),
+ (0.07541554373059539, &#39;Kalimat Ke-&#39;, 3),
+ (0.07302813243439654, &#39;Kalimat Ke-&#39;, 5),
+ (0.0679999125846498, &#39;Kalimat Ke-&#39;, 12),
+ (0.06310008839177517, &#39;Kalimat Ke-&#39;, 8),
+ (0.06295347165465216, &#39;Kalimat Ke-&#39;, 6),
+ (0.062120068759123265, &#39;Kalimat Ke-&#39;, 2),
+ (0.06035847803604813, &#39;Kalimat Ke-&#39;, 1),
+ (0.05622895301981944, &#39;Kalimat Ke-&#39;, 7),
+ (0.05100755005229351, &#39;Kalimat Ke-&#39;, 14),
+ (0.050347946566640996, &#39;Kalimat Ke-&#39;, 9),
+ (0.049557312789546046, &#39;Kalimat Ke-&#39;, 0),
+ (0.044862861825646735, &#39;Kalimat Ke-&#39;, 10),
+ (0.041169206021646886, &#39;Kalimat Ke-&#39;, 15)]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menyimpulkan-kalimat-berdasarkan-hasil-nilai-pagerank">
+<h3>Menyimpulkan Kalimat Berdasarkan Hasil Nilai PageRank<a class="headerlink" href="#menyimpulkan-kalimat-berdasarkan-hasil-nilai-pagerank" title="Permalink to this headline">#</a></h3>
+<p>Hasil Kalimat akan dipilih berdasarkan nilai PageRank tertinggi dan berikut hasil pagerank:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sentences_list</span><span class="p">[</span><span class="mi">10</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sentences_list</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sentences_list</span><span class="p">[</span><span class="mi">12</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sentences_list</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sentences_list</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sentences_list</span><span class="p">[</span><span class="mi">11</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sentences_list</span><span class="p">[</span><span class="mi">7</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sementara itu untuk harga Pertamax, Pertalite, dan
+Biosolar diketahui masih sama seperti bulan sebelumnya.
+Diketahui bahwa harga Shell Super turun jadi Rp 13.550/liter dari
+sebelumnya Rp 14.150/liter.
+Sebut saja untuk BBM Shell yang naik adalah V-Power Diesel yang kini dijual Rp
+18.840/liter dari sebelumnya Rp 18.450/liter.
+Adapun jenis BBM yang mengalami penurunan harga yakni Shell Super,
+Shell V-Power, dan Shell V-Power Nitro+.
+Selain Shell Super, Shell V-Power juga turun jadi Rp 14.210/liter dari yang
+sebelumnya dibanderol Rp 14.840/liter.
+Secara rinci, berikut daftar BBM di Indonesia yang
+turun harga: - Pertamax Turbo: dari Rp 14.950 jadi Rp 14.300 - Shell Super: dari Rp 14.150 jadi Rp 13.550-
+Shell V-Power: dari Rp 14.840 jadi Rp 14.210- Shell V-power Nitro+: dari Rp 15.230 jadi Rp 14.560 Sebagai
+informasi, selain mengalami penurunan harga, sejumlah produk BBM milik Pertamina dan Shell juga ada
+yang menjadi lebih mahal.
+Namun diketahui bahwa hanya BBM
+Pertamina jenis Pertamax Turbo yang mengalami sedikit penurunan harga.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="kesimpulan">
+<h2>Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permalink to this headline">#</a></h2>
+<p>Jadi, hasil ringkasan data yang didapat berdasarkan hasil pagerank ialah data dengan kalimat ke 9, 24, 11, 10, 14, 3, dan 21 dengan hasil ringkasan ialah: <br> <br>
+Sementara itu untuk harga Pertamax, Pertalite, dan
+Biosolar diketahui masih sama seperti bulan sebelumnya.
+Diketahui bahwa harga Shell Super turun jadi Rp 13.550/liter dari
+sebelumnya Rp 14.150/liter.
+Sebut saja untuk BBM Shell yang naik adalah V-Power Diesel yang kini dijual Rp
+18.840/liter dari sebelumnya Rp 18.450/liter.
+Adapun jenis BBM yang mengalami penurunan harga yakni Shell Super,
+Shell V-Power, dan Shell V-Power Nitro+.
+Selain Shell Super, Shell V-Power juga turun jadi Rp 14.210/liter dari yang
+sebelumnya dibanderol Rp 14.840/liter.
+Secara rinci, berikut daftar BBM di Indonesia yang
+turun harga: - Pertamax Turbo: dari Rp 14.950 jadi Rp 14.300 - Shell Super: dari Rp 14.150 jadi Rp 13.550-
+Shell V-Power: dari Rp 14.840 jadi Rp 14.210- Shell V-power Nitro+: dari Rp 15.230 jadi Rp 14.560 Sebagai
+informasi, selain mengalami penurunan harga, sejumlah produk BBM milik Pertamina dan Shell juga ada
+yang menjadi lebih mahal.
+Namun diketahui bahwa hanya BBM
+Pertamina jenis Pertamax Turbo yang mengalami sedikit penurunan harga.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Data_Twitter.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Data Web Twitter</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="UTS_PPW.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">UTS</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By 19-005 Moh. Syarif Hidayatullah Ralistiya<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
